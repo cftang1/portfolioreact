@@ -73,62 +73,22 @@ nav {
   background-color: #bbb;
 }
 
-// REFACTOR BELOW!!!
-.photo-nav-left {
+// Photo page album nav buttons
+
+.photo-nav {
   // overflow: hidden;
   z-index: 99;
-
-  background-color: $primary-color;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
   padding-top: 45px;
   height: 100vh;
   width: 50px;
-  border-right: 1px solid black;
   top: 0;
-  position: fixed;
-  text-align: center;
-  // overflow-y: hidden;
-  color: $accent-color;
-  font-family: "bould-thin";
-  &:hover {
-    background-color: grey;
-  }
-  img {
-    transform: rotate(-90deg);
-  }
-  h2 {
-    // rotates the text vertically
-    writing-mode: vertical-rl;
-    // flips text
-    // transform: rotate(180deg);
-    //padding is opposite side due to rotation
-    padding-right: 9px;
-    // invalid property?
-    // text-orientation: mixed;
-  }
-  h2:visited {
-    color: $accent-color;
-  }
-}
 
-.photo-nav-right {
-  // overflow: hidden;
-  z-index: 99;
-  background-color: $primary-color;
-  display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
-  padding-top: 45px;
-  height: 100vh;
-  width: 50px;
-  border-left: 1px solid black;
-  top: 0;
-  right: 0px;
   position: fixed;
-  -webkit-backface-visibility: hidden;
   text-align: center;
-  overflow-y: hidden;
-  //rotate up arrow
+
+  background-color: $primary-color;
   color: $accent-color;
   font-family: "bould-thin";
   font-weight: 400;
@@ -136,17 +96,23 @@ nav {
   &:hover {
     background-color: grey;
   }
-  img {
-    transform: rotate(90deg);
-  }
+
   h2 {
-    // rotates the text vertically
     writing-mode: vertical-rl;
-    // flips text
-    // transform: rotate(180deg);
-    //padding is opposite side due to rotation
     padding-right: 9px;
-    // invalid property?
-    // text-orientation: mixed;
+  }
+
+  &.right-side {
+    right: 0px;
+    border-left: 1px solid black;
+    img {
+      transform: rotate(90deg);
+    }
+  }
+  &.left-side {
+    border-right: 1px solid black;
+    img {
+      transform: rotate(-90deg);
+    }
   }
 }
