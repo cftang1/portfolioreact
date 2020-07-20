@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <div className="about">
-        <h1>about pae</h1>
+        <h1>about page</h1>
         <h2 className="fonttest">TEST test TEST</h2>
         <div id="maindiv">
           {/* <div id="div0">&nbsp;peak lockdown hair</div> */}
