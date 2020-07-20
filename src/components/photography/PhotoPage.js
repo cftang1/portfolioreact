@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-import handleViewport from "react-in-viewport";
+// import handleViewport from "react-in-viewport";
 // import AlbumData from "../../content/posts.json";
 import PhotoGrid from "../photography/PhotoGrid";
 import AlbumData from "../../content/posts.json";
