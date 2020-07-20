@@ -1,0 +1,14 @@
+* {
+  box-sizing: inherit;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  // transition-duration: 0.2s;
+}
+
+::selection {
+  background: #fff2a8;
+}
+::-moz-selection {
+  background: #fff2a8;
+}

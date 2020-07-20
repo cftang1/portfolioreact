@@ -1,0 +1,49 @@
+.dark {
+  .addDarkMode {
+    background-color: $accent-color-dark;
+  }
+  .addDarkMode:hover {
+    background-color: #bbb;
+  }
+  background-color: $primary-color-dark;
+  color: $accent-color-dark;
+  body {
+    background-color: $primary-color-dark;
+    color: $accent-color-dark;
+  }
+  nav {
+    background-color: $primary-color-dark;
+  }
+  a:visited {
+    color: $accent-color-dark;
+  }
+  nav {
+    border-bottom: 1px solid $accent-color-dark;
+  }
+  .photo-nav-left {
+    background-color: $primary-color-dark;
+    border-right: 1px solid $accent-color-dark;
+    color: $accent-color-dark;
+    img {
+      filter: invert(1);
+    }
+    &:hover {
+      background-color: grey;
+    }
+  }
+  .photo-nav-right {
+    background-color: $primary-color-dark;
+    border-left: 1px solid $accent-color-dark;
+    color: $accent-color-dark;
+    img {
+      filter: invert(1);
+    }
+    &:hover {
+      background-color: grey;
+    }
+  }
+  #maindiv {
+    -webkit-text-stroke: 1px $accent-color-dark;
+    color: $primary-color-dark;
+  }
+}

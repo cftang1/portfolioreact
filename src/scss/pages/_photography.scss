@@ -1,0 +1,87 @@
+.photo-container {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 45px);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
+}
+
+.photo-article {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 40vh;
+  min-width: 400px;
+}
+
+.photo-grid {
+  padding-top: 20px;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(200, 5vh);
+  grid-template-rows: repeat(20, 0.5fr);
+  img {
+    // visibility: hidden;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+.sidebar-container {
+  padding-right: 50px;
+}
+
+// photography
+.album-grid {
+  display: grid;
+  grid-template-columns: 22% 22% 22%;
+  grid-template-rows: 22% 22%;
+  grid-gap: 50px;
+  grid-row-gap: 240px;
+  @include for-phone-only {
+    grid-template-columns: 80%;
+    grid-template-rows: 80%;
+  }
+}
+
+.album-card {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  margin-top: 10px;
+  margin-left: 50px;
+  background-color: white;
+  display: inline-block;
+  border: solid black 1px;
+  vertical-align: bottom;
+
+  &:hover {
+    background-color: lightgrey;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 400px;
+    min-height: 400px;
+  }
+
+  .img-placeholder {
+    background-color: grey;
+    width: 400px;
+    height: 400px;
+  }
+}

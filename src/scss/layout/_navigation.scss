@@ -1,0 +1,152 @@
+// nav
+nav {
+  z-index: 100;
+  background-color: $primary-color;
+  border-bottom: 1px solid black;
+  min-height: 45px;
+
+  // font-family: "agestadisplay-regular";
+  font-family: "bould-regular";
+  font-size: 1.6rem;
+  line-height: 1.6;
+
+  padding-left: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  a {
+    text-decoration: none;
+    color: $accent-color;
+    &:visited {
+      color: $accent-color;
+    }
+    &:hover {
+      color: purple;
+    }
+  }
+  a:active {
+    text-decoration: underline;
+  }
+  li {
+    padding-right: 20px;
+  }
+  .active {
+    text-decoration: underline;
+    // font-weight: 600;
+  }
+  .seperator {
+    font-weight: 600;
+    color: grey;
+    padding-right: 12px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+  .name {
+    font-weight: 600;
+  }
+  button {
+    position: absolute;
+    top: 10px;
+    right: 80px;
+  }
+}
+
+.addDarkMode {
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  outline: none;
+  transition-duration: 0.4s;
+}
+.addDarkMode:hover {
+  background-color: #bbb;
+}
+
+// REFACTOR BELOW!!!
+.photo-nav-left {
+  // overflow: hidden;
+  z-index: 99;
+
+  background-color: $primary-color;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  padding-top: 45px;
+  height: 100vh;
+  width: 50px;
+  border-right: 1px solid black;
+  top: 0;
+  position: fixed;
+  text-align: center;
+  // overflow-y: hidden;
+  color: $accent-color;
+  font-family: "bould-thin";
+  &:hover {
+    background-color: grey;
+  }
+  img {
+    transform: rotate(-90deg);
+  }
+  h2 {
+    // rotates the text vertically
+    writing-mode: vertical-rl;
+    // flips text
+    // transform: rotate(180deg);
+    //padding is opposite side due to rotation
+    padding-right: 9px;
+    // invalid property?
+    // text-orientation: mixed;
+  }
+  h2:visited {
+    color: $accent-color;
+  }
+}
+
+.photo-nav-right {
+  // overflow: hidden;
+  z-index: 99;
+  background-color: $primary-color;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  padding-top: 45px;
+  height: 100vh;
+  width: 50px;
+  border-left: 1px solid black;
+  top: 0;
+  right: 0px;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  text-align: center;
+  overflow-y: hidden;
+  //rotate up arrow
+  color: $accent-color;
+  font-family: "bould-thin";
+  font-weight: 400;
+
+  &:hover {
+    background-color: grey;
+  }
+  img {
+    transform: rotate(90deg);
+  }
+  h2 {
+    // rotates the text vertically
+    writing-mode: vertical-rl;
+    // flips text
+    // transform: rotate(180deg);
+    //padding is opposite side due to rotation
+    padding-right: 9px;
+    // invalid property?
+    // text-orientation: mixed;
+  }
+}
