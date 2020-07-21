@@ -7,7 +7,6 @@ import PhotoGrid from "../photography/PhotoGrid";
 import AlbumData from "../../content/posts.json";
 import PhotoNavLeft from "./PhotoNavLeft";
 import PhotoNavRight from "./PhotoNavRight";
-import GetPageTitle from "./GetPageTitle";
 
 // Page containing article and images
 
