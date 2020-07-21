@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Rimsha and Ismail's Wedding",
-    "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582048227/RI2019_thumb_dhlo9r.jpg",
+    "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582048227/RI/RI2019_thumb_dhlo9r.jpg",
     "description": "Ismail and Rimsha's wedding",
     "link": "walk",
     "pageLength": 110
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "title": "A Sunny Day at The Halo",
-    "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582048227/AL2019_thumb_hdmoce.jpg",
+    "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582048227/AL/AL2019_thumb_hdmoce.jpg",
     "description": "The halo",
     "pageLength": 50
   },

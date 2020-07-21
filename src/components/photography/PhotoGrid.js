@@ -30,6 +30,7 @@ const PhotoGrid = (props) => {
                 src={postDetail.img}
                 alt={postDetail.title}
                 style={divStyle}
+
                 // show when image leaves and enters viewport
 
                 // onEnterViewport={() => console.log("enter")}

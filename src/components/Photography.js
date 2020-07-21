@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-import PhotoAlbums from "./PhotoAlbums";
+import PhotoAlbums from "./photography/PhotoAlbums";
 
 function Photography() {
   return (
