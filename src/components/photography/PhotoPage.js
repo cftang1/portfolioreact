@@ -49,15 +49,11 @@ function PhotoContainer(props) {
       <div className="photo-container">
         <div className="sidebar-container">
           <div className="photo-article">
-            <h1>2019</h1>
-            <p>page state is {props.id}</p>
-            <p>
-              <GetPageTitle id={Number(props.id) + 1} />
-            </p>
             {albumCurr.map((postDetail, index) => {
               return (
                 <React.Fragment key={index}>
-                  <h1>{postDetail.title}</h1>
+                  <h1>00{postDetail.id}</h1>
+                  <h2>{postDetail.title}</h2>
                   <p>{postDetail.description}</p>
                 </React.Fragment>
               );
@@ -76,14 +72,19 @@ function calculatePageLength(id) {
     1: require("../../content/albums/album_1.json"),
     2: require("../../content/albums/album_2.json"),
   };
-  const albumData = [...albums[id]];
-  const gridColumn = albumData.pop().gridColumn;
-  // gridColumn = [number] / span [number]
-  const regexFirst = /[-]{0,1}[\d]*[.]{0,1}[\d]+/;
-  const regexLast = /[-]{0,1}[\d]*[.]{0,1}[\d]+\w+$/;
-  let pageLength =
-    Number(gridColumn.match(regexFirst)) + Number(gridColumn.match(regexLast));
-  return pageLength;
+  try {
+    const albumData = [...albums[id]];
+    const gridColumn = albumData.pop().gridColumn;
+    // gridColumn = [number] / span [number]
+    const regexFirst = /[-]{0,1}[\d]*[.]{0,1}[\d]+/;
+    const regexLast = /[-]{0,1}[\d]*[.]{0,1}[\d]+\w+$/;
+    let pageLength =
+      Number(gridColumn.match(regexFirst)) +
+      Number(gridColumn.match(regexLast));
+    return pageLength;
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export default PhotoPage;
