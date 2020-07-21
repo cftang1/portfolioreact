@@ -7,6 +7,9 @@ import About from "./components/About";
 import Photography from "./components/Photography";
 import Home from "./components/Home";
 import PhotoPage from "./components/photography/PhotoPage";
+import NotFound from "./components/NotFound";
+
+import AlbumErrorBoundary from "./components/photography/ErrorBoundary";
 
 function App() {
   return (
@@ -17,7 +20,12 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/photography" exact component={Photography} />
-          <Route path="/photography/:id" exact component={PhotoPage} />
+          <Route path="/photography/:id" exact>
+            <AlbumErrorBoundary>
+              <PhotoPage />
+            </AlbumErrorBoundary>
+          </Route>
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
     </>
