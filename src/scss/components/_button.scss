@@ -27,13 +27,18 @@
   color: $accent-color;
   font-family: "bould-thin";
   text-align: center;
-  font-weight: 400;
+  font-size: 1rem;
   img {
     margin: auto;
+    padding: 5px;
   }
 
   &:hover {
     background-color: grey;
+    color: $primary-color;
+    img {
+      filter: invert(1);
+    }
   }
 
   h2 {

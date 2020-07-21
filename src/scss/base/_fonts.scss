@@ -38,6 +38,18 @@
     url("../../fonts/argestatext-regular-webfont.ttf") format("truetype");
 }
 @font-face {
+  font-family: "agestadhairline-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/argestatext-regular-webfont.eot");
+  src: local("chaney"), local("chaney"),
+    url("../../fonts/argestahairline-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/argestahairline-regular-webfont.woff2") format("woff2"),
+    url("../../fonts/argestahairline-regular-webfont.woff") format("woff"),
+    url("../../fonts/argestahairline-regular-webfont.ttf") format("truetype");
+}
+@font-face {
   font-family: "bould-thin";
   font-style: normal;
   font-weight: 400;
@@ -59,4 +71,16 @@
     url("../../fonts/bould-regular-webfont.woff2") format("woff2"),
     url("../../fonts/bould-regular-webfont.woff") format("woff"),
     url("../../fonts/bould-regular-webfont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "geomanist-black";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/geomanist-black-webfont.eot");
+  src: local("chaney"), local("chaney"),
+    url("../../fonts/geomanist-black-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/geomanist-black-webfont.woff2") format("woff2"),
+    url("../../fonts/geomanist-black-webfont.woff") format("woff"),
+    url("../../fonts/geomanist-black-webfont.ttf") format("truetype");
 }

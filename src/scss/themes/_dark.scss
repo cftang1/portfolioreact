@@ -72,4 +72,14 @@
     -webkit-text-stroke: 1px $accent-color-dark;
     color: $primary-color-dark;
   }
+
+  .album-card {
+    background-color: $primary-color-dark;
+    &:hover {
+      background-color: lightgrey;
+      a {
+        color: $primary-color-dark;
+      }
+    }
+  }
 }

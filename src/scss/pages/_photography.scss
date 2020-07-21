@@ -20,10 +20,30 @@
 
 .photo-article {
   text-align: right;
-  padding-right: 20px;
-  padding-top: 40vh;
-  min-width: 400px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 30vh;
+  min-width: 599px;
+  h1 {
+    // position: relative;
+    z-index: -1;
+    line-height: 2vh;
+    // font-family: agestadhairline-regular;
+    color: rgba(0, 195, 255, 0.171);
+    font-family: chaney;
+
+    font-size: 20vh;
+    text-decoration: underline;
+  }
+  font-family: agestadhairline-regular;
+  h2 {
+    color: rgb(0, 70, 92);
+    line-height: 1;
+    font-size: 8vh;
+    text-align: left;
+  }
 }
+
 $squareSize: calc((100vh - 60px) / 20);
 $squareSizeMob: calc((100vh - 145px) / 20);
 
@@ -61,45 +81,123 @@ $squareSizeMob: calc((100vh - 145px) / 20);
   padding-right: 50px;
 }
 
-// photography
-.album-grid {
-  display: grid;
-  grid-template-columns: 22% 22% 22%;
-  grid-template-rows: 22% 22%;
-  grid-gap: 50px;
-  grid-row-gap: 240px;
+// photography page
+.album-container {
+  margin-left: 50px;
+  margin-right: 50px;
   @include for-phone-only {
-    grid-template-columns: 80%;
-    grid-template-rows: 80%;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+.album-grid {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  // grid-template-rows: 22% 22%;
+  grid-gap: 50px;
+  // grid-row-gap: 240px;
+  @include for-phone-only {
+    grid-template-columns: 1fr;
+  }
+  @include for-tablet-portrait-up {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include for-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include for-big-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 .album-card {
-  padding-left: 25px;
-  padding-right: 25px;
+  // width: 380px;
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
   padding-bottom: 25px;
-  margin-top: 10px;
-  margin-left: 50px;
+  // padding: 10px;
+  // margin-top: 10px;
+  // margin-left: 10px;
+
+  width: 100%;
+  height: 100%;
   background-color: white;
   display: inline-block;
-  border: solid black 1px;
+  border: solid rgb(141, 141, 141) 1px;
   vertical-align: bottom;
+
+  font-family: bould-regular;
 
   &:hover {
     background-color: lightgrey;
+  }
+  a {
+    text-decoration: none;
+    color: $accent-color;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
   }
 
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    min-width: 400px;
-    min-height: 400px;
+    width: 100%;
+    height: 100%;
+    @include for-phone-only {
+      // width: 350px;
+      // height: 350px;
+    }
+    // @include for-tablet-portrait-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
+    // @include for-tablet-landscape-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
+    // @include for-desktop-up {
+    //   width: 300px;
+    //   height: 300px;
+    // }
+    // @include for-big-desktop-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
   }
 
   .img-placeholder {
-    background-color: grey;
-    width: 400px;
-    height: 400px;
+    // background-color: grey;
+    width: 100%;
+    min-height: 60%;
+    // @include for-phone-only {
+    //   width: 350px;
+    //   height: 350px;
+    // }
+    // @include for-tablet-portrait-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
+    // @include for-tablet-landscape-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
+    // @include for-desktop-up {
+    //   width: 300px;
+    //   height: 300px;
+    // }
+    // @include for-big-desktop-up {
+    //   width: 350px;
+    //   height: 350px;
+    // }
   }
 }

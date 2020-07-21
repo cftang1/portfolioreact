@@ -7,11 +7,11 @@ nav {
 
   // font-family: "agestadisplay-regular";
   font-family: "bould-regular";
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.6;
 
   @include for-phone-only {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 10px;
   }
 
