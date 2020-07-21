@@ -10,36 +10,31 @@ const PhotoGrid = (props) => {
   const PhotoData = albums[props.id];
   return (
     <>
-      {/* <h1>Photos Data ID = {id.id}</h1> */}
-      <div className="photo-grid">
+      <div
+        className="photo-grid"
+        style={{
+          gridTemplateColumns: `repeat(${props.pageLength}, calc((100vh - 145px) / 20))`,
+        }}
+      >
         {PhotoData.map((postDetail, index) => {
           const divStyle = {
             gridColumn: postDetail.gridColumn,
             gridRow: postDetail.gridRow,
             zIndex: postDetail.zIndex,
+            alignSelf: postDetail.alignSelf,
           };
           return (
             <React.Fragment key={postDetail.id + index}>
-              {/* <Image
-                index={index}
-                src={postDetail.img}
-                alt={postDetail.title}
-                style={divStyle}
-              /> */}
               <ViewportBlock
                 index={index}
                 src={postDetail.img}
                 alt={postDetail.title}
                 style={divStyle}
-                onEnterViewport={() => console.log("enter")}
-                onLeaveViewport={() => console.log("leave")}
+                // show when image leaves and enters viewport
+
+                // onEnterViewport={() => console.log("enter")}
+                // onLeaveViewport={() => console.log("leave")}
               />
-              {/* <img
-                key={index}
-                src={postDetail.img}
-                alt={postDetail.title}
-                style={divStyle}
-              ></img> */}
             </React.Fragment>
           );
         })}
@@ -65,8 +60,8 @@ const Image = (props) => {
 
 let options = {
   root: document.querySelector("#photo-container"),
-  rootMargin: "0px",
-  threshold: 1.0,
+  rootMargin: "10px",
+  threshold: 0.5,
 };
 
 const ViewportBlock = handleViewport(

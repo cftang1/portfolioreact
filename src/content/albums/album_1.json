@@ -37,9 +37,9 @@
     "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582047570/RI/RI5_a9vfyq.jpg",
     "description": "A photo of a rhino charging at a bear",
     "gridColumn": "47 / span 11",
-    "gridRow": "12 / span 10",
+    "gridRow": "12 / span 8",
     "zIndex": "2",
-    "align-self": "end"
+    "alignSelf": ""
   },
   {
     "id": 6,

@@ -13,7 +13,7 @@
     "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582047568/AL/AL2_n_bdveek.jpg",
     "description": "A photo of a rhino charging at a bear",
     "gridColumn": "16 / span 16",
-    "gridRow": "4 / span 20"
+    "gridRow": "5 / span 9"
   },
   {
     "id": 3,
@@ -21,14 +21,14 @@
     "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582047568/AL/AL3_n_w6lcks.jpg",
     "description": "A photo of a cactus on a sunny beach",
     "gridColumn": "33 / span 13",
-    "gridRow": "2 / span 10"
+    "gridRow": "2 / span 9"
   },
   {
     "id": 4,
     "title": "bear",
     "img": "https://res.cloudinary.com/drfbjbnqj/image/upload/v1582047571/AL/AL4_n_peov0k.jpg",
     "description": "A photo of a bear eating honey",
-    "gridColumn": "36 / span 12",
-    "gridRow": "12 / span 10"
+    "gridColumn": "36 / span 15",
+    "gridRow": "12 / span 8"
   }
 ]

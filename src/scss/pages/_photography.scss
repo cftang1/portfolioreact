@@ -10,6 +10,12 @@
   // -moz-box-sizing: border-box;
   // -webkit-box-sizing: border-box;
   // box-sizing: border-box;
+  @include for-phone-only {
+    left: 0px;
+    top: 95px;
+    width: 100%;
+    height: calc(100% - 145px);
+  }
 }
 
 .photo-article {
@@ -18,24 +24,36 @@
   padding-top: 40vh;
   min-width: 400px;
 }
+$squareSize: calc((100vh - 60px) / 20);
+$squareSizeMob: calc((100vh - 145px) / 20);
 
 .photo-grid {
-  padding-top: 20px;
-  height: 90vh;
+  padding-top: 0px;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(200, 5vh);
-  grid-template-rows: repeat(20, 0.5fr);
+  grid-template-columns: repeat(200, $squareSize);
+  grid-template-rows: repeat(20, $squareSize);
   img {
     // visibility: hidden;
     object-fit: cover;
     width: 100%;
-    max-height: 100%;
+    height: 100%;
+
+    // max-height: 100%;
     cursor: pointer;
     -khtml-user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
+  }
+  @include for-phone-only {
+    padding-top: 0px;
+    padding-bottom: 45px;
+    height: calc(100% - 145px);
+    // height: 90%;
+    grid-template-columns: repeat(200, $squareSizeMob);
+    grid-template-rows: repeat(20, $squareSizeMob);
   }
 }
 

@@ -10,21 +10,6 @@ import PhotoNavRight from "./PhotoNavRight";
 import GetPageTitle from "./GetPageTitle";
 
 // Page containing article and images
-function BlogPost(id) {
-  let albumCurr = AlbumData.filter((album) => album.id === Number(id.id));
-  return (
-    <>
-      {albumCurr.map((postDetail, index) => {
-        return (
-          <React.Fragment key={index}>
-            <h1>{postDetail.title}</h1>
-            <p>{postDetail.description}</p>
-          </React.Fragment>
-        );
-      })}
-    </>
-  );
-}
 
 const PhotoPage = () => {
   let { id } = useParams();
@@ -52,31 +37,53 @@ const PhotoPage = () => {
           <PhotoNavRight id={nextPageNum} />
         </Link>
       )}
+      <PhotoContainer id={id} />
+    </>
+  );
+};
+
+function PhotoContainer(props) {
+  let albumCurr = AlbumData.filter((album) => album.id === Number(props.id));
+  return (
+    <>
       <div className="photo-container">
         <div className="sidebar-container">
           <div className="photo-article">
             <h1>2019</h1>
-            <p>page state is {id}</p>
+            <p>page state is {props.id}</p>
             <p>
-              <GetPageTitle id={nextPageNum} />
+              <GetPageTitle id={Number(props.id) + 1} />
             </p>
-            <BlogPost id={id} />
-            <div>
-              {/* {albumCurr.map((postDetail, index) => {
+            {albumCurr.map((postDetail, index) => {
               return (
-                <>
+                <React.Fragment key={index}>
                   <h1>{postDetail.title}</h1>
                   <p>{postDetail.description}</p>
-                  <p>read more...</p>
-                </>
+                </React.Fragment>
               );
-            })} */}
-            </div>
+            })}
           </div>
         </div>
-        <PhotoGrid id={id} />
+        <PhotoGrid id={props.id} pageLength={calculatePageLength(props.id)} />
       </div>
+      {calculatePageLength(1)}
     </>
   );
-};
+}
+
+function calculatePageLength(id) {
+  const albums = {
+    1: require("../../content/albums/album_1.json"),
+    2: require("../../content/albums/album_2.json"),
+  };
+  const albumData = [...albums[id]];
+  const gridColumn = albumData.pop().gridColumn;
+  // gridColumn = [number] / span [number]
+  const regexFirst = /[-]{0,1}[\d]*[.]{0,1}[\d]+/;
+  const regexLast = /[-]{0,1}[\d]*[.]{0,1}[\d]+\w+$/;
+  let pageLength =
+    Number(gridColumn.match(regexFirst)) + Number(gridColumn.match(regexLast));
+  return pageLength;
+}
+
 export default PhotoPage;
