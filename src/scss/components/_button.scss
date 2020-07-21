@@ -1,0 +1,95 @@
+.addDarkMode {
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  outline: none;
+  transition-duration: 0.4s;
+}
+.addDarkMode:hover {
+  background-color: #bbb;
+}
+
+// Photo page album nav buttons
+
+.photo-nav {
+  // overflow: hidden;
+  z-index: 99;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
+  padding-top: 45px;
+  height: calc(100vh - 45px);
+  width: 50px;
+
+  background-color: $primary-color;
+  color: $accent-color;
+  font-family: "bould-thin";
+  text-align: center;
+  font-weight: 400;
+  img {
+    margin: auto;
+  }
+
+  &:hover {
+    background-color: grey;
+  }
+
+  h2 {
+    writing-mode: vertical-rl;
+    padding-right: 9px;
+  }
+
+  // left side
+  &.back {
+    // top: 0;
+    border-right: 1px solid black;
+    img {
+      transform: rotate(-90deg);
+    }
+  }
+  // right side
+  &.forward {
+    right: 0px;
+    border-left: 1px solid black;
+    img {
+      transform: rotate(90deg);
+    }
+  }
+
+  @include for-phone-only {
+    grid-template-columns: 1fr 4fr 1fr;
+    font-size: 0.8rem;
+    height: 50px;
+    width: 100vw;
+    h2 {
+      writing-mode: horizontal-tb;
+      padding-top: 9px;
+      overflow: hidden;
+    }
+    img {
+      margin: auto;
+    }
+    // top
+    &.back {
+      // padding-top: 0px;
+      border-right: none;
+      border-bottom: 1px solid black;
+      img {
+        transform: rotate(0deg);
+      }
+    }
+    // bottom
+    &.forward {
+      bottom: 0;
+      padding-top: 0px;
+      border-left: none;
+      border-top: 1px solid black;
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

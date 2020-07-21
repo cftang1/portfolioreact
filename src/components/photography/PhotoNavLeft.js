@@ -6,7 +6,7 @@ import GetPageTitle from "./GetPageTitle";
 function PhotoNavLeft(props) {
   return (
     <>
-      <div className="photo-nav left-side">
+      <div className="photo-nav back">
         <img src={Up} alt="arrow-left" />
         <h2>
           <GetPageTitle id={props.id} />

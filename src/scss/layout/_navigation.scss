@@ -10,6 +10,11 @@ nav {
   font-size: 1.6rem;
   line-height: 1.6;
 
+  @include for-phone-only {
+    font-size: 1.2rem;
+    padding-left: 10px;
+  }
+
   padding-left: 50px;
   position: fixed;
   top: 0;
@@ -57,62 +62,5 @@ nav {
     position: absolute;
     top: 10px;
     right: 80px;
-  }
-}
-
-.addDarkMode {
-  height: 25px;
-  width: 25px;
-  background-color: #000;
-  border-radius: 50%;
-  display: inline-block;
-  outline: none;
-  transition-duration: 0.4s;
-}
-.addDarkMode:hover {
-  background-color: #bbb;
-}
-
-// Photo page album nav buttons
-
-.photo-nav {
-  // overflow: hidden;
-  z-index: 99;
-  display: grid;
-  grid-template-rows: 1fr 4fr 1fr;
-  padding-top: 45px;
-  height: 100vh;
-  width: 50px;
-  top: 0;
-
-  position: fixed;
-  text-align: center;
-
-  background-color: $primary-color;
-  color: $accent-color;
-  font-family: "bould-thin";
-  font-weight: 400;
-
-  &:hover {
-    background-color: grey;
-  }
-
-  h2 {
-    writing-mode: vertical-rl;
-    padding-right: 9px;
-  }
-
-  &.right-side {
-    right: 0px;
-    border-left: 1px solid black;
-    img {
-      transform: rotate(90deg);
-    }
-  }
-  &.left-side {
-    border-right: 1px solid black;
-    img {
-      transform: rotate(-90deg);
-    }
   }
 }
