@@ -1,0 +1,125 @@
+//underline
+
+.underline-hover {
+  text-decoration: none;
+  // padding: 20px 0px;
+  // margin: 0px 20px;
+  // margin-right: 10px;
+  display: inline-block;
+  position: relative;
+
+  &::before {
+    transition: 350ms;
+    height: 4px;
+    content: "";
+    position: absolute;
+    // background-color: black;
+    @include themed() {
+      background-color: t($text);
+    }
+    width: 0%;
+    bottom: 6px;
+    // left: -2%;
+  }
+  &:hover::before {
+    width: 100%;
+  }
+  // add space after span
+  // &::after {
+  //   content: " ";
+  //   white-space: pre;
+  // }
+}
+
+// text ticker
+#ticker-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: chaney;
+  font-size: 10vw;
+
+  @include themed() {
+    color: t($bg);
+    -webkit-text-stroke: 1px t($text);
+  }
+  #div1 {
+    display: inline-block;
+    animation: marquee1 50s linear infinite;
+  }
+
+  #div2 {
+    display: inline-block;
+    animation: marquee2 50s linear infinite;
+    animation-delay: 25s;
+  }
+}
+
+@keyframes marquee1 {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes marquee2 {
+  0% {
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-200%, 0, 0);
+  }
+}
+
+// ticker-2
+
+.tickerContainer {
+  overflow: hidden;
+}
+.ticker-2 {
+  height: 12vw;
+  width: 100vw;
+  min-width: 1300px;
+
+  @include themed() {
+    color: t($bg);
+    -webkit-text-stroke: 1px t($text);
+  }
+  font-family: chaney;
+  font-size: 11vw;
+
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  div {
+    display: inline-block;
+    width: 200%;
+    /*   height: 25px; */
+    position: absolute;
+    overflow: hidden;
+    animation: ticker 25s linear infinite;
+  }
+  span {
+    float: left;
+    width: 50%;
+  }
+}
+
+@keyframes ticker {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}

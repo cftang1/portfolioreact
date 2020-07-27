@@ -7,71 +7,30 @@
 }
 .about-1 {
   height: 100vh;
-}
+  margin-top: 45px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: bould-regular;
 
-// text ticker
-#maindiv {
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: chaney;
-  font-size: 10vw;
-
-  color: $primary-color;
-  @include themed() {
-    color: t($bg);
-    -webkit-text-stroke: 1px t($text);
-  }
-}
-
-#div1 {
-  display: inline-block;
-  animation: marquee1 50s linear infinite;
-}
-
-#div2 {
-  display: inline-block;
-  animation: marquee2 50s linear infinite;
-  animation-delay: 25s;
-}
-
-// @keyframes marquee {
-//   from {
-//     transform: translateX(100%);
-//   }
-//   to {
-//     transform: translateX(-100%);
-//   }
-// }
-
-// @keyframes marquee2 {
-//   from {
-//     transform: translateX(0%);
-//   }
-//   to {
-//     transform: translateX(-200%);
-//   }
-// }
-@keyframes marquee1 {
-  0% {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    visibility: visible;
+  .ph {
+    color: rgb(104, 174, 231);
   }
 
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+  @include for-phone-only {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 2rem;
   }
-}
-@keyframes marquee2 {
-  0% {
-    -webkit-transform: translate3d(0%, 0, 0);
-    transform: translate3d(0%, 0, 0);
-    visibility: visible;
+  @include for-tablet-portrait-up {
+    font-size: 5rem;
   }
-
-  100% {
-    -webkit-transform: translate3d(-200%, 0, 0);
-    transform: translate3d(-200%, 0, 0);
+  @include for-tablet-landscape-up {
+    font-size: 5rem;
+  }
+  @include for-desktop-up {
+    font-size: 5rem;
+  }
+  @include for-big-desktop-up {
+    font-size: 5rem;
   }
 }

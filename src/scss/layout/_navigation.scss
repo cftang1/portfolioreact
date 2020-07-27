@@ -35,15 +35,15 @@ nav {
     &:visited {
       color: inherit;
     }
-    &:hover {
-      color: purple;
-    }
+    // &:hover {
+    //   color: purple;
+    // }
   }
   a:active {
     text-decoration: underline;
   }
   li {
-    padding-right: 20px;
+    margin-right: 20px;
   }
   .active {
     text-decoration: underline;
@@ -65,5 +65,11 @@ nav {
     position: absolute;
     top: 10px;
     right: 80px;
+  }
+  .underline-hover {
+    &::before {
+      height: 1px;
+      bottom: 0px;
+    }
   }
 }
