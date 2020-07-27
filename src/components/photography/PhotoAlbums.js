@@ -18,11 +18,15 @@ function PhotoAlbums() {
                     <div className="img-placeholder">
                       <img src={postDetail.img} alt={postDetail.title}></img>
                     </div>
-                    <p>2019</p>
+                  </Link>
+                  <Link to={`/photography/${postDetail.id}`}>
+                    <div className="album-card-info">
+                      <p className="album-card-date">{postDetail.date}</p>
 
-                    <h1>{postDetail.title}</h1>
+                      <h1>{postDetail.title}</h1>
 
-                    <p>{postDetail.description}</p>
+                      <p>{postDetail.description}</p>
+                    </div>
                   </Link>
                 </div>
               </React.Fragment>

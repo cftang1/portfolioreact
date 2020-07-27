@@ -3,3 +3,58 @@ $accent-color: #000;
 
 $primary-color-dark: #000;
 $accent-color-dark: #fff;
+
+//////////////////////
+$bg--light: #fff;
+$bg--card--light: #fff;
+$text--light: #000;
+$text--2--light: #000;
+// $brand--blue--light;
+$hover--light: #000;
+$hover--text--light: #fff;
+// $border--light;
+
+$bg--dark: #000;
+$bg--card--dark: #000;
+$text--dark: #fff;
+$text--2--dark: #fff;
+$hover--dark: #fff;
+$hover--text--dark: #000;
+// $filter: invert(1);
+
+$bg: "bg";
+$card-bg: "card-bg";
+$text: "text";
+$text-hover: "text-hover";
+$text-secondary: "text-secondary";
+$link: "link";
+$hover: "hover";
+$logo: "logo";
+$brand-blue: "brand-blue";
+$brand-red: "brand-red";
+$border: "border";
+
+$themes: (
+  default: (
+    bg: $bg--light,
+    card-bg: $bg--card--light,
+    text: $text--light,
+    text-secondary: $text--2--light,
+    // link: $brand--blue--light,
+      hover: $hover--light,
+    text-hover: $hover--text--light,
+    // border: $border--light,,,,,,,,,,,,,,,,,,,,,,
+  ),
+  dark: (
+    bg: $bg--dark,
+    card-bg: $bg--card--dark,
+    text: $text--dark,
+    text-secondary: $text--2--dark,
+    // link: $brand--blue--dark,
+      hover: $hover--dark,
+    text-hover: $hover--text--dark,
+    // border: $border--dark,,,,,,,,,,,,,,,,,,,,,,
+  ),
+);
+$squareSize: calc((100vh - 60px) / 20);
+$squareSizeMob: calc((100vh - 145px) / 20);

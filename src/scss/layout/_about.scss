@@ -1,14 +1,26 @@
 .about {
   padding-top: 45px;
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
 }
+.about-1 {
+  height: 100vh;
+}
+
 // text ticker
 #maindiv {
   overflow: hidden;
   white-space: nowrap;
   font-family: chaney;
   font-size: 10vw;
-  -webkit-text-stroke: 1px $accent-color;
+
   color: $primary-color;
+  @include themed() {
+    color: t($bg);
+    -webkit-text-stroke: 1px t($text);
+  }
 }
 
 #div1 {

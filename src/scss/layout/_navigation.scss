@@ -1,20 +1,7 @@
 // nav
 nav {
   z-index: 100;
-  background-color: $primary-color;
-  border-bottom: 1px solid black;
   min-height: 45px;
-
-  // font-family: "agestadisplay-regular";
-  font-family: "bould-regular";
-  font-size: 1rem;
-  line-height: 1.6;
-
-  @include for-phone-only {
-    font-size: 1rem;
-    padding-left: 10px;
-  }
-
   padding-left: 50px;
   position: fixed;
   top: 0;
@@ -22,15 +9,31 @@ nav {
   -webkit-backface-visibility: hidden;
   width: 100%;
 
+  // font-family: "agestadisplay-regular";
+  font-family: "bould-regular";
+  font-size: 1rem;
+  line-height: 1.6;
+
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+    border-bottom: 1px solid t($text);
+  }
+
+  @include for-phone-only {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+
   ul {
     list-style-type: none;
     display: flex;
   }
   a {
     text-decoration: none;
-    color: $accent-color;
+    color: inherit;
     &:visited {
-      color: $accent-color;
+      color: inherit;
     }
     &:hover {
       color: purple;

@@ -11,7 +11,8 @@ function DarkToggle() {
     const theme = document.querySelector(".body");
     //add dark class
     button.classList.toggle("dark");
-    theme.classList.toggle("dark");
+    theme.classList.toggle("theme--dark");
+    theme.classList.toggle("theme--default");
   };
 
   return (

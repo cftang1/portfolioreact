@@ -1,11 +1,13 @@
 .addDarkMode {
   height: 25px;
   width: 25px;
-  background-color: #000;
   border-radius: 50%;
   display: inline-block;
   outline: none;
   transition-duration: 0.4s;
+  @include themed() {
+    background-color: t($text);
+  }
 }
 .addDarkMode:hover {
   background-color: #bbb;
@@ -23,11 +25,15 @@
   height: calc(100vh - 45px);
   width: 50px;
 
-  background-color: $primary-color;
-  color: $accent-color;
+  // background-color: $primary-color;
+  // color: $accent-color;
   font-family: "bould-thin";
   text-align: center;
   font-size: 1rem;
+  @include themed() {
+    color: t($text);
+    background-color: t($bg);
+  }
   img {
     margin: auto;
     padding: 5px;
@@ -49,7 +55,9 @@
   // left side
   &.back {
     // top: 0;
-    border-right: 1px solid black;
+    @include themed() {
+      border-right: 1px solid t($text);
+    }
     img {
       transform: rotate(-90deg);
     }
@@ -57,7 +65,9 @@
   // right side
   &.forward {
     right: 0px;
-    border-left: 1px solid black;
+    @include themed() {
+      border-left: 1px solid t($text);
+    }
     img {
       transform: rotate(90deg);
     }

@@ -6,8 +6,10 @@ import PhotoAlbums from "./photography/PhotoAlbums";
 function Photography() {
   return (
     <>
-      <h1>photography</h1>
-      <PhotoAlbums />
+      <div className="photography-page">
+        <h1>photography</h1>
+        <PhotoAlbums />
+      </div>
     </>
   );
 }

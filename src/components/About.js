@@ -5,6 +5,9 @@ function About() {
     <>
       <div className="about">
         <h1>about page</h1>
+        <div className="about-1">
+          <p>loremiohuh</p>
+        </div>
         <h2 className="fonttest">TEST test TEST</h2>
         <div id="maindiv">
           {/* <div id="div0">&nbsp;peak lockdown hair</div> */}

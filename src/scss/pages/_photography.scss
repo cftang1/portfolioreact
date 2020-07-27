@@ -1,3 +1,10 @@
+.photography-page {
+  height: 100vh;
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}
 .photo-container {
   position: fixed;
   display: flex;
@@ -5,16 +12,23 @@
   left: 50px;
   width: calc(100% - 100px);
   height: calc(100% - 45px);
+
   overflow-x: scroll;
   overflow-y: hidden;
   // -moz-box-sizing: border-box;
   // -webkit-box-sizing: border-box;
   // box-sizing: border-box;
+
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
   @include for-phone-only {
     left: 0px;
     top: 95px;
     width: 100%;
     height: calc(100% - 145px);
+    padding-bottom: 50px;
   }
 }
 
@@ -23,29 +37,64 @@
   padding-right: 40px;
   padding-left: 40px;
   padding-top: 30vh;
-  min-width: 599px;
+  // width: 50vw;
+
+  font-family: agestadhairline-regular;
+
   h1 {
-    // position: relative;
     z-index: -1;
     line-height: 2vh;
-    // font-family: agestadhairline-regular;
     color: rgba(0, 195, 255, 0.171);
     font-family: chaney;
+    text-decoration: underline;
 
     font-size: 20vh;
-    text-decoration: underline;
   }
-  font-family: agestadhairline-regular;
   h2 {
     color: rgb(0, 70, 92);
-    line-height: 1;
-    font-size: 8vh;
     text-align: left;
+
+    line-height: 1;
+    font-size: 9vh;
+  }
+  h5 {
+    line-height: 1;
+  }
+  p {
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 5px;
+  }
+  @include for-phone-only {
+    min-width: calc(599px - 80px);
+  }
+  @include for-tablet-portrait-up {
+    min-width: calc(600px - 80px);
+    h1 {
+      font-size: 20vh;
+    }
+    h2 {
+      line-height: 1;
+      font-size: 9vh;
+    }
+    h5 {
+      line-height: 1;
+    }
+    p {
+      padding-top: 50px;
+      padding-left: 5px;
+    }
+  }
+  @include for-tablet-landscape-up {
+    min-width: calc(900px - 80px);
+  }
+  @include for-desktop-up {
+    min-width: calc(1200px - 80px);
+  }
+  @include for-big-desktop-up {
+    min-width: calc(1800px - 80px);
   }
 }
-
-$squareSize: calc((100vh - 60px) / 20);
-$squareSizeMob: calc((100vh - 145px) / 20);
 
 .photo-grid {
   padding-top: 0px;
@@ -115,30 +164,38 @@ $squareSizeMob: calc((100vh - 145px) / 20);
 }
 
 .album-card {
-  // width: 380px;
   padding-left: 8px;
   padding-top: 8px;
   padding-right: 8px;
   padding-bottom: 25px;
-  // padding: 10px;
-  // margin-top: 10px;
-  // margin-left: 10px;
 
   width: 100%;
   height: 100%;
-  background-color: white;
+
   display: inline-block;
   border: solid rgb(141, 141, 141) 1px;
   vertical-align: bottom;
 
   font-family: bould-regular;
 
-  &:hover {
-    background-color: lightgrey;
-  }
   a {
     text-decoration: none;
-    color: $accent-color;
+    color: inherit;
+
+    .album-card-info {
+      margin-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      &:hover {
+        @include themed() {
+          color: t($text-hover);
+          background: t($hover);
+        }
+      }
+      .album-card-date {
+        font-size: 0.8rem;
+      }
+    }
   }
   h1 {
     font-size: 1rem;
@@ -179,6 +236,7 @@ $squareSizeMob: calc((100vh - 145px) / 20);
     // background-color: grey;
     width: 100%;
     min-height: 60%;
+    padding-bottom: 5px;
     // @include for-phone-only {
     //   width: 350px;
     //   height: 350px;

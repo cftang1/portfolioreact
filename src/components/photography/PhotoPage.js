@@ -53,6 +53,7 @@ function PhotoContainer(props) {
                 <React.Fragment key={index}>
                   <h1>00{postDetail.id}</h1>
                   <h2>{postDetail.title}</h2>
+                  <h5>{postDetail.date}</h5>
                   <p>{postDetail.description}</p>
                 </React.Fragment>
               );
@@ -80,7 +81,7 @@ function calculatePageLength(id) {
     let pageLength =
       Number(gridColumn.match(regexFirst)) +
       Number(gridColumn.match(regexLast));
-    return pageLength;
+    return pageLength + 10;
   } catch (error) {
     console.error(error);
   }
