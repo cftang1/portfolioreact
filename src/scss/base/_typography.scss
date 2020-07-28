@@ -87,11 +87,11 @@
   width: 100%;
   // min-width: 1300px;
 
-  // @include themed() {
-  //   color: t($bg);
-  //   -webkit-text-stroke: 1px t($bg);
-  // }
-  -webkit-text-stroke: 1px white;
+  @include themed() {
+    // color: t($bg);
+    -webkit-text-stroke: 1px t($text);
+  }
+  // -webkit-text-stroke: 1px white;
   color: rgba($color: #000000, $alpha: 0);
 
   font-family: chaney;

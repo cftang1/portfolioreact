@@ -4,7 +4,7 @@ function About() {
   return (
     <>
       <div className="about">
-        <h1>about page</h1>
+        {/* <h1>about page</h1> */}
         <About1 />
         <About2 />
 
@@ -74,6 +74,7 @@ function About2() {
             Throughout lockdown I have been working at ASDA, fulfilling online
             orders as a picker until I find my dream job in Web Development.
           </p>
+          <img></img>
         </div>
       </div>
       {/* <div id="ticker-1">
