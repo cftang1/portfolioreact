@@ -86,15 +86,15 @@
 }
 .ticker-2 {
   height: 12vw;
-  width: 100vw;
-  min-width: 1300px;
+  width: 100%;
+  // min-width: 1300px;
 
   @include themed() {
     color: t($bg);
     -webkit-text-stroke: 1px t($text);
   }
   font-family: chaney;
-  font-size: 11vw;
+  font-size: 7.6vw;
 
   text-align: center;
   overflow: hidden;
