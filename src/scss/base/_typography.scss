@@ -81,25 +81,25 @@
 
 // ticker-2
 
-.tickerContainer {
-  overflow: hidden;
-}
 .ticker-2 {
+  position: relative;
   height: 12vw;
   width: 100%;
   // min-width: 1300px;
 
-  @include themed() {
-    color: t($bg);
-    -webkit-text-stroke: 1px t($text);
-  }
+  // @include themed() {
+  //   color: t($bg);
+  //   -webkit-text-stroke: 1px t($bg);
+  // }
+  -webkit-text-stroke: 1px white;
+  color: rgba($color: #000000, $alpha: 0);
+
   font-family: chaney;
-  font-size: 7.6vw;
+  // font-size: 7.6vw;
 
   text-align: center;
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
 
   div {
     display: inline-block;
@@ -112,6 +112,24 @@
   span {
     float: left;
     width: 50%;
+    @include for-phone-only {
+      font-size: 7.65vw;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 7.65vw;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 7.65vw;
+    }
+    @include for-desktop-up {
+      font-size: 7.6vw;
+    }
+    @include for-big-desktop-up {
+      font-size: 3.85vw;
+      &::after {
+        content: " peak lockdown hair";
+      }
+    }
   }
 }
 

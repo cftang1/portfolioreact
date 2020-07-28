@@ -34,3 +34,155 @@
     font-size: 5rem;
   }
 }
+.about-2 {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  // z-index: -2;
+  position: relative;
+  overflow: hidden;
+}
+.plastic {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  filter: invert(100%);
+}
+.grain {
+  /* Specify a height and width above and beyond the page header for movement */
+  height: 300%;
+  width: 300%;
+  /* We're using opacity in place of a transparent image */
+  opacity: 0.9;
+  /* We'll need this when the animation kicks in to hold the position of the texture */
+  position: absolute;
+  // z-index: -1;
+  left: -50%;
+  top: -110%;
+  animation: grain 8s steps(10) infinite;
+}
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+.about-backtext {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  .about-backtext-bottom {
+    position: absolute;
+    width: 100%;
+    @include for-phone-only {
+      bottom: -13px;
+    }
+    @include for-tablet-portrait-up {
+      bottom: -15px;
+    }
+    @include for-tablet-landscape-up {
+      bottom: -20px;
+    }
+    @include for-desktop-up {
+      bottom: -30px;
+    }
+    @include for-big-desktop-up {
+      bottom: -135px;
+    }
+  }
+}
+.tickerContainer {
+  overflow: hidden;
+  position: relative;
+  bottom: 0;
+}
+
+.about-content-container {
+  position: absolute;
+  width: 90%;
+  top: 0;
+  padding-left: 100px;
+  padding-right: 150px;
+
+  @include themed() {
+    color: t($text);
+  }
+  h5 {
+    font-family: chaney;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 100px;
+    width: 50%;
+  }
+  @include for-phone-only {
+    padding-top: 50px;
+    padding-left: 40px;
+    h5 {
+      font-size: 2.5rem;
+      width: 80%;
+    }
+  }
+  @include for-tablet-portrait-up {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 500px;
+
+    h5 {
+      font-size: 3rem;
+    }
+  }
+  @include for-tablet-landscape-up {
+    padding-top: 50px;
+    h5 {
+      font-size: 3rem;
+    }
+  }
+  @include for-desktop-up {
+    padding-top: 75px;
+    h5 {
+      font-size: 3.5vw;
+    }
+    p {
+      font-size: 2vw;
+    }
+  }
+  @include for-big-desktop-up {
+    padding-top: 35px;
+    h5 {
+      font-size: 3.5vw;
+    }
+    p {
+      font-size: 2vw;
+    }
+  }
+}
