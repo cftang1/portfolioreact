@@ -2,8 +2,11 @@
 nav {
   z-index: 100;
   min-height: 45px;
-  padding-left: 50px;
-  position: fixed;
+  // padding-left: 50px;
+  // padding-right: 50px;
+
+  position: static;
+  overflow-x: hidden;
   top: 0;
   left: 0;
   -webkit-backface-visibility: hidden;
@@ -17,7 +20,7 @@ nav {
   @include themed() {
     color: t($text);
     background: t($bg);
-    border-bottom: 1px solid t($text);
+    // border-bottom: 1px solid t($text);
   }
 
   @include for-phone-only {
@@ -26,6 +29,8 @@ nav {
   }
 
   ul {
+    padding-left: 50px;
+
     list-style-type: none;
     display: flex;
   }

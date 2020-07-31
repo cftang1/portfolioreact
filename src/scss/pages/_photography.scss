@@ -1,6 +1,7 @@
 .photography-page {
-  margin-top: 45px;
-  height: 100%;
+  // margin-bottom: 45px;
+  min-height: 100vh;
+  // overflow-y: scroll;
   @include themed() {
     color: t($text);
     background: t($bg);
@@ -29,7 +30,7 @@
     top: 95px;
     width: 100%;
     height: calc(100% - 145px);
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
   }
 }
 
@@ -119,8 +120,8 @@
   }
   @include for-phone-only {
     padding-top: 0px;
-    padding-bottom: 45px;
-    height: calc(100% - 145px);
+    // padding-bottom: 45px;
+    height: calc(100% - 100px);
     // height: 90%;
     grid-template-columns: repeat(200, $squareSizeMob);
     grid-template-rows: repeat(20, $squareSizeMob);
@@ -134,7 +135,7 @@
 // photography page
 .album-container {
   padding-top: 5px;
-  padding-bottom: 50px; // check
+  // padding-bottom: 50px; // check
   margin-left: 50px;
   margin-right: 50px;
   @include for-phone-only {
