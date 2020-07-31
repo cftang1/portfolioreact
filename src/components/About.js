@@ -70,11 +70,17 @@ function About2() {
         </div>
         <div className="about-content-container">
           <h5>So what have I been up to recently?</h5>
-          <p>
-            Throughout lockdown I have been working at ASDA, fulfilling online
-            orders as a picker until I find my dream job in Web Development.
-          </p>
-          <img></img>
+          <div className="grid">
+            <p>
+              Throughout lockdown I have been working at ASDA, fulfilling online
+              orders as a picker until I find my dream job in Web Development.
+            </p>
+            <div></div>
+            <img
+              src="https://res.cloudinary.com/drfbjbnqj/image/upload/v1595947721/melckdwn_oukkgx.jpg"
+              alt="monkey"
+            ></img>
+          </div>
         </div>
       </div>
       {/* <div id="ticker-1">
