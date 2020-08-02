@@ -108,6 +108,9 @@
     position: absolute;
     overflow: hidden;
     animation: ticker 25s linear infinite;
+    @include for-big-desktop-up {
+      animation: ticker 60s linear infinite;
+    }
   }
   span {
     float: left;

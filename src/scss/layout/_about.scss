@@ -138,6 +138,7 @@
   h5 {
     font-family: chaney;
     font-weight: 400;
+    z-index: 6;
   }
 
   @include for-phone-only {
@@ -150,8 +151,8 @@
   }
   @include for-tablet-portrait-up {
     padding-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
 
     h5 {
       font-size: 3rem;
@@ -164,7 +165,7 @@
     }
   }
   @include for-desktop-up {
-    padding-top: 75px;
+    padding-top: 80px;
     h5 {
       font-size: 3.5vw;
     }
@@ -186,14 +187,15 @@
   // width: 90vw;
 
   p {
-    font-family: chaney;
-    font-weight: 400;
+    font-family: arial;
+    font-weight: 800;
     opacity: 0.8;
+    z-index: 5;
   }
   img {
     opacity: 0.5;
     position: relative;
-    max-height: 50%;
+    // max-height: 50%;
 
     width: auto;
     height: auto;
