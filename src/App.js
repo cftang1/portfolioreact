@@ -8,7 +8,6 @@ import Photography from "./components/Photography";
 import Home from "./components/Home";
 import PhotoPage from "./components/photography/PhotoPage";
 import NotFound from "./components/NotFound";
-
 import AlbumErrorBoundary from "./components/photography/ErrorBoundary";
 
 function App() {

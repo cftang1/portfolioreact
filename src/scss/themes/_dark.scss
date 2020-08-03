@@ -7,6 +7,14 @@
   .plastic {
     filter: invert(0);
   }
+  .grain {
+    opacity: 0.9;
+  }
+  .grid {
+    img {
+      opacity: 0.6;
+    }
+  }
 }
 
 // old keep for reference

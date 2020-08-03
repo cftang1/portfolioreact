@@ -28,10 +28,14 @@ nav {
   }
 
   ul {
-    padding-left: 50px;
+    padding-left: 100px;
 
     list-style-type: none;
     display: flex;
+
+    @include for-phone-only {
+      padding-left: 50px;
+    }
   }
   a {
     text-decoration: none;
