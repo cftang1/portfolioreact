@@ -25,11 +25,14 @@ function About1() {
   return (
     <div className="container about-1">
       <p>Hi, i'm Chi.</p>
+      <br />
       <p>
         {" "}
-        I am a creative web developer from the North West of England. I like to
-        do <span className="ph underline-hover">photography</span> and other
-        things
+        I am a creative web developer from the North West of England.
+        <br />
+        <br /> I also like to do{" "}
+        <span className="ph underline-hover">photography</span>, graphic design
+        and art.
       </p>
     </div>
   );
@@ -94,9 +97,11 @@ function About2() {
 function ContactMe() {
   return (
     <>
-      <p>email: </p>
-      <p>resume on request</p>
-      <p>phone on request</p>
+      <div className="container">
+        <p>email: </p>
+        <p>resume on request</p>
+        <p>phone on request</p>
+      </div>
     </>
   );
 }

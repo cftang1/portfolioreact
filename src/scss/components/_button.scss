@@ -1,5 +1,19 @@
 .addDarkMode {
   position: fixed;
+  @include for-phone-only {
+    top: 50px;
+    right: 5px;
+  }
+  @include for-tablet-portrait-up {
+    top: 50px;
+    right: 5px;
+  }
+  @include for-tablet-landscape-up {
+  }
+  @include for-desktop-up {
+    top: 5px;
+    right: 50px;
+  }
   top: 5px;
   right: 50px;
   z-index: 100;
