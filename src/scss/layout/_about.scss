@@ -5,11 +5,31 @@
     background: t($bg);
   }
 }
+.container {
+  @include for-phone-only {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @include for-tablet-portrait-up {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @include for-tablet-landscape-up {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @include for-desktop-up {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @include for-big-desktop-up {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
 .about-1 {
   height: 100vh;
   margin-top: 45px;
-  margin-left: 100px;
-  margin-right: 100px;
   font-family: bould-regular;
 
   .ph {
@@ -17,8 +37,6 @@
   }
 
   @include for-phone-only {
-    margin-left: 50px;
-    margin-right: 50px;
     font-size: 2rem;
   }
   @include for-tablet-portrait-up {
@@ -127,7 +145,7 @@
   bottom: 0;
 }
 
-.about-content-container {
+.about-content {
   position: absolute;
   top: 0;
   left: 0;
@@ -143,35 +161,32 @@
 
   @include for-phone-only {
     padding-top: 60px;
-    padding-left: 40px;
+    // margin-left: 50px;
     h5 {
       font-size: 2.5rem;
-      width: 80%;
+      // width: 80%;
     }
   }
   @include for-tablet-portrait-up {
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
-
+    padding-top: 70px;
     h5 {
       font-size: 3rem;
     }
   }
   @include for-tablet-landscape-up {
-    padding-top: 50px;
+    padding-top: 100px;
     h5 {
       font-size: 3rem;
     }
   }
   @include for-desktop-up {
-    padding-top: 80px;
+    padding-top: 120px;
     h5 {
       font-size: 3.5vw;
     }
   }
   @include for-big-desktop-up {
-    padding-top: 35px;
+    padding-top: 100px;
     h5 {
       font-size: 3.5vw;
     }
@@ -202,7 +217,7 @@
   }
   @include for-phone-only {
     row-gap: 30px;
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
 
     p {
       margin-top: 50px;
@@ -212,10 +227,10 @@
     }
   }
   @include for-tablet-portrait-up {
-    grid-template-columns: 90%;
+    grid-template-columns: 100%;
     row-gap: 30px;
+    margin-top: 30px;
     p {
-      margin-top: 30px;
       font-size: 2vw;
     }
     img {
@@ -224,7 +239,7 @@
   }
   @include for-tablet-landscape-up {
     grid-template-columns: 30% auto 60%;
-    padding-top: 100px;
+    padding-top: 40px;
   }
   @include for-desktop-up {
     p {

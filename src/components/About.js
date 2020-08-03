@@ -7,7 +7,7 @@ function About() {
         {/* <h1>about page</h1> */}
         <About1 />
         <About2 />
-
+        <ContactMe />
         <h2 className="fonttest">TEST test TEST</h2>
         <h2 className="fonttest">TEST test TEST</h2>
         <h2 className="fonttest">TEST test TEST</h2>
@@ -23,7 +23,7 @@ function About() {
 
 function About1() {
   return (
-    <div className="about-1">
+    <div className="container about-1">
       <p>Hi, i'm Chi.</p>
       <p>
         {" "}
@@ -68,7 +68,7 @@ function About2() {
             </div>
           </div>
         </div>
-        <div className="about-content-container">
+        <div className="container about-content">
           <h5>So what have I been up to recently?</h5>
           <div className="grid">
             <p>
@@ -91,7 +91,13 @@ function About2() {
   );
 }
 
-// function ContactMe() {
-//   return <></>;
-// }
+function ContactMe() {
+  return (
+    <>
+      <p>email: </p>
+      <p>resume on request</p>
+      <p>phone on request</p>
+    </>
+  );
+}
 export default About;
