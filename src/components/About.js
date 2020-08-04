@@ -64,7 +64,10 @@ const grain = {
   backgroundImage: `url(https://res.cloudinary.com/drfbjbnqj/image/upload/v1595946318/noise_bekfwu.png)`,
 };
 const ViewportText = handleViewport(Block /** options: {}, config: {} **/);
-const ViewportImage = handleViewport(Block /** options: {}, config: {} **/);
+const ViewportImage = handleViewport(Block, {
+  rootMargin: "10px",
+  threshold: 0.7,
+});
 const ViewportTicker1 = handleViewport(Fade /** options: {}, config: {} **/);
 const ViewportTicker2 = handleViewport(Fade /** options: {}, config: {} **/);
 
@@ -113,7 +116,7 @@ function About2() {
             </ViewportText>
 
             <div></div>
-            <ViewportImage delay={950}>
+            <ViewportImage delay={250}>
               <img
                 src="https://res.cloudinary.com/drfbjbnqj/image/upload/v1595947721/melckdwn_oukkgx.jpg"
                 alt="monkey"
