@@ -116,12 +116,12 @@ function About2() {
             </ViewportText>
 
             <div></div>
-            <ViewportImage delay={250}>
+            <ViewportText delay={350}>
               <img
                 src="https://res.cloudinary.com/drfbjbnqj/image/upload/v1595947721/melckdwn_oukkgx.jpg"
                 alt="monkey"
               ></img>
-            </ViewportImage>
+            </ViewportText>
           </div>
         </div>
       </div>
