@@ -7,6 +7,28 @@
 }
 .container {
   @include for-phone-only {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include for-tablet-portrait-up {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include for-tablet-landscape-up {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  @include for-desktop-up {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include for-big-desktop-up {
+    padding-left: 250px;
+    padding-right: 250px;
+  }
+}
+.container2 {
+  @include for-phone-only {
     margin-left: 50px;
     margin-right: 50px;
   }
@@ -23,8 +45,8 @@
     margin-right: 100px;
   }
   @include for-big-desktop-up {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
   }
 }
 .about-1 {
@@ -37,20 +59,26 @@
   }
 
   @include for-phone-only {
+    padding-top: 200px;
     font-size: 2rem;
   }
   @include for-tablet-portrait-up {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
   @include for-tablet-landscape-up {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   @include for-desktop-up {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   @include for-big-desktop-up {
     font-size: 5rem;
   }
+}
+
+.mywork {
+  height: 100vh;
+  background-color: rgba($color: #f85353, $alpha: 0.1);
 }
 .about-2 {
   height: 100vh;
@@ -60,6 +88,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .plastic {
   height: 100vh;
   background-position: center;
@@ -180,13 +209,13 @@
   @include for-desktop-up {
     padding-top: 120px;
     h5 {
-      font-size: 3.5vw;
+      font-size: 4rem;
     }
   }
   @include for-big-desktop-up {
     padding-top: 100px;
     h5 {
-      font-size: 3.5vw;
+      font-size: 4.5rem;
     }
   }
 }
@@ -201,7 +230,7 @@
 
   p {
     font-family: arial;
-    font-weight: 800;
+    // font-weight: 800;
     opacity: 0.8;
     z-index: 5;
   }
@@ -212,6 +241,9 @@
 
     width: auto;
     height: auto;
+    @include themed() {
+      border: 1px solid t($text);
+    }
   }
   @include for-phone-only {
     row-gap: 30px;
@@ -236,7 +268,7 @@
     }
   }
   @include for-tablet-landscape-up {
-    grid-template-columns: 30% auto 60%;
+    grid-template-columns: 40% auto 40%;
     padding-top: 40px;
   }
   @include for-desktop-up {
@@ -250,5 +282,24 @@
     p {
       font-size: 2vw;
     }
+  }
+}
+
+.contact {
+  padding-top: 50px;
+  height: 100vh;
+
+  color: white;
+  background: rgba($color: #290f31, $alpha: 1);
+  h1 {
+    font-family: chaney;
+    font-size: 8rem;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+  }
+  .details {
+    padding-top: 300px;
   }
 }
