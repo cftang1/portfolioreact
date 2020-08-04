@@ -1,5 +1,5 @@
 .about {
-  padding-top: 45px;
+  // padding-top: 45px;
   @include themed() {
     color: t($text);
     background: t($bg);
@@ -29,7 +29,7 @@
 }
 .about-1 {
   height: 100vh;
-  margin-top: 45px;
+  // margin-top: 45px;
   font-family: bould-regular;
 
   .ph {
@@ -40,10 +40,10 @@
     font-size: 2rem;
   }
   @include for-tablet-portrait-up {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   @include for-tablet-landscape-up {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   @include for-desktop-up {
     font-size: 5rem;

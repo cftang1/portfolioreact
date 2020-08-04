@@ -1,10 +1,11 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
+import handleViewport from "react-in-viewport";
 
 function About() {
   return (
     <>
       <div className="about">
-        {/* <h1>about page</h1> */}
         <About1 />
         <About2 />
         <ContactMe />
@@ -94,15 +95,51 @@ function About2() {
   );
 }
 
+const Block = (props) => {
+  const { children, inViewport, forwardedRef, delay } = props;
+  const style = useSpring({
+    from: {
+      opacity: inViewport ? 0 : 1,
+      transform: inViewport
+        ? "translate3d(0, -30px, 0)"
+        : "translate3d(0, 0px, 0)",
+    },
+    to: {
+      opacity: inViewport ? 1 : 0,
+      transform: inViewport
+        ? "translate3d(0, 0px, 0)"
+        : "translate3d(0, 30px, 0)",
+    },
+    delay,
+    config: { mass: 10, tension: 550, friction: 140, duration: 800 },
+  });
+  return (
+    <>
+      <animated.div ref={forwardedRef} style={style}>
+        {children}
+      </animated.div>
+    </>
+  );
+};
+
+const ViewportBlock = handleViewport(Block /** options: {}, config: {} **/);
+
 function ContactMe() {
   return (
     <>
       <div className="container">
-        <p>email: </p>
-        <p>resume on request</p>
-        <p>phone on request</p>
+        <ViewportBlock
+          onEnterViewport={() => console.log("enter")}
+          onLeaveViewport={() => console.log("leave")}
+          delay={250}
+        >
+          <p>email: </p>
+          <p>resume on request</p>
+          <p>phone on request</p>
+        </ViewportBlock>
       </div>
     </>
   );
 }
+
 export default About;
