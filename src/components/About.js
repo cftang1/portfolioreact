@@ -65,8 +65,8 @@ const grain = {
 };
 const ViewportText = handleViewport(Block /** options: {}, config: {} **/);
 const ViewportImage = handleViewport(Block, {
-  rootMargin: "10px",
-  threshold: 0.7,
+  // rootMargin: "10px",
+  threshold: 0.5,
 });
 const ViewportTicker1 = handleViewport(Fade /** options: {}, config: {} **/);
 const ViewportTicker2 = handleViewport(Fade /** options: {}, config: {} **/);
