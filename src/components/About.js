@@ -39,25 +39,21 @@ function About1() {
       <ViewportAbout1 delay={0}>
         <p>Hi, i'm Chi.</p>
       </ViewportAbout1>
-
       <br />
-      <p>
-        {" "}
-        <ViewportAbout2 delay={200}>
-          <p>I am a creative web developer from the North West of England.</p>
-        </ViewportAbout2>
-        <br />
-        <br />
-        <ViewportAbout3 delay={300}>
-          <p>
-            I also like to do{" "}
-            <NavLink to="/photography">
-              <span className="ph underline-hover">photography</span>
-            </NavLink>
-            , graphic design and art.
-          </p>
-        </ViewportAbout3>
-      </p>
+      <ViewportAbout2 delay={200}>
+        <p>I am a creative web developer from the North West of England.</p>
+      </ViewportAbout2>
+      <br />
+      <br />
+      <ViewportAbout3 delay={300}>
+        <p>
+          I also like to do{" "}
+          <NavLink to="/photography">
+            <span className="ph underline-hover">photography</span>
+          </NavLink>
+          , graphic design and art.
+        </p>
+      </ViewportAbout3>
     </div>
   );
 }
