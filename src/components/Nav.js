@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../scss/main.scss";
 
 import DarkToggle from "../components/DarkToggle";
+import Burger from "./Burger";
 
 function Nav() {
   return (
@@ -21,6 +22,7 @@ function Nav() {
             <li className="underline-hover">photography </li>
           </NavLink>
         </ul>
+        <Burger />
         <DarkToggle />
       </nav>
     </>
