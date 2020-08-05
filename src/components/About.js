@@ -79,7 +79,7 @@ function About2() {
         <div className="grain" style={grain}></div>
         <div className="about-backtext">
           <ViewportTicker1 delay={400}>
-            <div className="tickerContainer">
+            <div className="tickerContainer tctop">
               <div className="ticker-2">
                 <div>
                   <span>peak lockdown hair</span>
