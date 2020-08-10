@@ -8,7 +8,7 @@ import Burger from "./Burger";
 function Nav() {
   return (
     <>
-      <nav className="theme">
+      <nav className="theme" id="home">
         <ul>
           <NavLink exact to="/">
             <li className="name underline-hover">Chi Fung</li>

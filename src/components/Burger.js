@@ -26,7 +26,7 @@ function Burger() {
           <ul>
             <ScrollToTop />
 
-            <NavLink exact to="/" onClick={handleMenu}>
+            <NavLink exact to="/#home" onClick={handleMenu}>
               <li className="underline-hover">Home</li>
             </NavLink>
             <NavLink to="/#about" onClick={handleMenu}>
