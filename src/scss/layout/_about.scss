@@ -1,4 +1,4 @@
-.about {
+.home {
   // padding-top: 45px;
   @include themed() {
     color: t($text);
@@ -52,15 +52,16 @@
 .about-1 {
   height: 100vh;
   // margin-top: 45px;
-  font-family: bould-regular;
+  font-family: bould-thin;
+  font-weight: 600;
 
   .ph {
     color: rgb(104, 174, 231);
   }
 
   @include for-phone-only {
-    padding-top: 200px;
-    font-size: 2rem;
+    // padding-top: 200px;
+    font-size: 2.5rem;
   }
   @include for-tablet-portrait-up {
     font-size: 3.3rem;
@@ -77,7 +78,7 @@
 }
 
 .mywork {
-  height: 100vh;
+  height: 150vh;
   background-color: rgba($color: #f85353, $alpha: 0.1);
 }
 .about-2 {
@@ -232,10 +233,11 @@
   // width: 90vw;
 
   p {
-    font-family: arial;
-    // font-weight: 800;
-    opacity: 0.8;
-    z-index: 5;
+    font-family: bould-thin;
+    // font-weight: 200;
+    // opacity: 0.6;
+    z-index: 6;
+    // font-weight: 600;
   }
   img {
     opacity: 0.7;
@@ -253,6 +255,8 @@
     grid-template-columns: 100%;
 
     p {
+      font-size: 1.5rem;
+
       margin-top: 50px;
     }
     img {
@@ -264,7 +268,7 @@
     row-gap: 30px;
     margin-top: 30px;
     p {
-      font-size: 2vw;
+      font-size: 2.3rem;
     }
     img {
       width: 100%;
@@ -278,23 +282,26 @@
     p {
       margin-top: 0px;
 
-      font-size: 2vw;
+      font-size: 2.5rem;
     }
   }
   @include for-big-desktop-up {
     p {
-      font-size: 2vw;
+      font-size: 3rem;
     }
   }
 }
 
 .contact {
-  padding-top: 50px;
+  // padding-top: 50px;
   height: 100vh;
+  position: relative;
 
   color: white;
   background: rgba($color: #3e2b91, $alpha: 0.5);
   h1 {
+    padding-top: 50px;
+
     font-family: chaney;
     @include for-phone-only {
       font-size: 2rem;
@@ -313,7 +320,9 @@
     }
   }
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: bould-thin;
+    font-weight: 600;
     @include for-phone-only {
       font-size: 1rem;
     }
@@ -331,11 +340,13 @@
     // }
   }
   .details {
+    position: absolute;
+    bottom: 30px;
     @include for-phone-only {
-      padding-top: 70vh;
+      // padding-top: 70vh;
     }
     @include for-tablet-portrait-up {
-      padding-top: 50vh;
+      // padding-top: 50vh;
     }
   }
 }
