@@ -81,3 +81,74 @@ nav {
     }
   }
 }
+
+// menu
+.menu-container {
+  position: fixed;
+  // left: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  transition-duration: 0.3s;
+
+  .menu-items {
+    position: absolute;
+    // right: 100px;
+    top: 100px;
+    // transform: translate(-50%, -50%);
+    // font-size: 5vw;
+    font-family: chaney;
+    @include for-phone-only {
+      font-size: 3rem;
+      right: 50px;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 5rem;
+      right: 50px;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 5rem;
+      right: 100px;
+    }
+    @include for-desktop-up {
+    }
+    @include for-big-desktop-up {
+    }
+    ul {
+      display: block;
+      padding-left: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:visited {
+        color: inherit;
+      }
+      &.active {
+        // text-decoration: underline;
+      }
+    }
+    li {
+      // display: block;
+      float: right;
+      clear: right;
+      margin-right: 0;
+      &:hover {
+        // color: purple;
+      }
+    }
+  }
+  &.close {
+    transition-duration: 0.8s;
+    background: purple;
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+  }
+}
