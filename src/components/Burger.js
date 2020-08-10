@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 // import { NavLink } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 function Burger() {
   const [clicked, setClicked] = useState({ status: false });
@@ -49,13 +48,5 @@ function Burger() {
     </>
   );
 }
-function ScrollToTop() {
-  const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-
-  return null;
-}
 export default Burger;

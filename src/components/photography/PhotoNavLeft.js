@@ -1,6 +1,7 @@
 import React from "react";
 import Up from "../../svg/arrow-up.svg";
 import GetPageTitle from "./GetPageTitle";
+
 // Button to navigate to previous photo album
 
 function PhotoNavLeft(props) {
