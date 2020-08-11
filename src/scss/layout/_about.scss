@@ -54,6 +54,8 @@
   // margin-top: 45px;
   font-family: bould-thin;
   font-weight: 600;
+  // background-color: rgba($color: #459c98, $alpha: 0.5);
+  background-color: rgba($color: #c0bfbf, $alpha: 0.1);
 
   .ph {
     color: rgb(104, 174, 231);
@@ -77,10 +79,6 @@
   }
 }
 
-.mywork {
-  height: 150vh;
-  background-color: rgba($color: #f85353, $alpha: 0.1);
-}
 .about-2 {
   height: 100vh;
   background-position: center;
@@ -235,9 +233,9 @@
   p {
     font-family: bould-thin;
     // font-weight: 200;
-    // opacity: 0.6;
+    opacity: 0.6;
     z-index: 6;
-    // font-weight: 600;
+    font-weight: 600;
   }
   img {
     opacity: 0.7;
@@ -298,7 +296,7 @@
   position: relative;
 
   color: white;
-  background: rgba($color: #3e2b91, $alpha: 0.5);
+  background: rgba($color: #2b41a3, $alpha: 0.8);
   h1 {
     padding-top: 50px;
 
@@ -348,5 +346,22 @@
     @include for-tablet-portrait-up {
       // padding-top: 50vh;
     }
+  }
+}
+
+//work
+.mywork {
+  height: 160vh;
+  // background-color: rgba($color: #747561, $alpha: 0.1);
+  background-image: linear-gradient(
+    rgba(255, 58, 58, 0.9),
+    rgba(255, 243, 77, 0.5)
+  );
+}
+.work-grid {
+  display: grid;
+  div {
+    border: 1px solid white;
+    height: 50vh;
   }
 }

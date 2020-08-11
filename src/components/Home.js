@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 
 import handleViewport from "react-in-viewport";
 
+import MyWork from "./Work";
+
 // Animation components
 import Block from "./viewportSprings/Block";
 import Fade from "./viewportSprings/Fade";
@@ -124,18 +126,18 @@ function About2() {
   );
 }
 //work
-function MyWork() {
-  return (
-    <>
-      <div className="mywork container" id="work">
-        <h1>Work</h1>
-        <p>DDouble Drawing</p>
-        <p>tetris</p>
-        <p>Sun Dragon Loyalty Cards</p>
-      </div>
-    </>
-  );
-}
+// function MyWork() {
+//   return (
+//     <>
+//       <div className="mywork container" id="work">
+//         <h1>Work</h1>
+//         <p>DDouble Drawing</p>
+//         <p>tetris</p>
+//         <p>Sun Dragon Loyalty Cards</p>
+//       </div>
+//     </>
+//   );
+// }
 
 //animation + contact
 
@@ -149,9 +151,9 @@ function ContactMe() {
           <ViewportBlock delay={550}>
             <h1>Contact </h1>
           </ViewportBlock>
-          <ViewportBlock delay={800}>
+          {/* <ViewportBlock delay={800}>
             <h1>Email </h1>
-          </ViewportBlock>
+          </ViewportBlock> */}
           <ViewportBlock delay={800}>
             <p>chhi@gmail.com</p>
           </ViewportBlock>
