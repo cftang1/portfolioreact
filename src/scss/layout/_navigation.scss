@@ -13,7 +13,8 @@ nav {
   width: 100%;
 
   // font-family: "agestadisplay-regular";
-  font-family: "bould-regular";
+  font-family: "bould-thin";
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.6;
 
@@ -28,6 +29,7 @@ nav {
   }
 
   ul {
+    padding-top: 9px;
     padding-left: 100px;
 
     list-style-type: none;
