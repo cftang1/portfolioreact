@@ -363,8 +363,16 @@
 }
 .work-grid {
   display: grid;
+  width: 100%;
   div {
     border: 1px solid white;
     height: 50vh;
   }
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
 }

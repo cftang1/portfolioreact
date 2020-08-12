@@ -1,5 +1,5 @@
 import React from "react";
-
+import LCard from "./Work/LCard";
 function MyWork() {
   return (
     <>
@@ -9,7 +9,10 @@ function MyWork() {
         <p>tetris</p>
         <p>Sun Dragon Loyalty Cards</p> */}
         <div className="work-grid">
-          <div>1</div>
+          <div>
+            1<br />
+            <LCard />
+          </div>
           <div>2</div>
           <div>3</div>
         </div>

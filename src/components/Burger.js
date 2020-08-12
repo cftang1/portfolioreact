@@ -22,27 +22,28 @@ function Burger() {
         <span></span>
       </div>
       <div className="menu-container">
-        <div className="menu-items">
-          <ul>
-            <ScrollToTop />
-
-            <NavLink exact to="/#home" onClick={handleMenu}>
-              <li className="underline-hover">Home</li>
-            </NavLink>
-            <NavLink to="/#about" onClick={handleMenu}>
-              <li className="underline-hover">About</li>
-            </NavLink>
-            <NavLink to="/#work" onClick={handleMenu}>
-              <li className="underline-hover">Work</li>
-            </NavLink>
-            <NavLink to="/photography" onClick={handleMenu}>
-              <li className="underline-hover">Photo</li>
-            </NavLink>
-            {/* </ScrollToTop> */}
-            <NavLink to="/#contact" onClick={handleMenu}>
-              <li className="underline-hover">Contact</li>
-            </NavLink>
-          </ul>
+        <div className="bg">
+          <div className="menu-items">
+            <ul>
+              <ScrollToTop />
+              <NavLink exact to="/#home" onClick={handleMenu}>
+                <li className="underline-hover">Home</li>
+              </NavLink>
+              <NavLink to="/#about" onClick={handleMenu}>
+                <li className="underline-hover">About</li>
+              </NavLink>
+              <NavLink to="/#work" onClick={handleMenu}>
+                <li className="underline-hover">Work</li>
+              </NavLink>
+              <NavLink to="/photography" onClick={handleMenu}>
+                <li className="underline-hover">Photo</li>
+              </NavLink>
+              {/* </ScrollToTop> */}
+              <NavLink to="/#contact" onClick={handleMenu}>
+                <li className="underline-hover">Contact</li>
+              </NavLink>
+            </ul>
+          </div>
         </div>
       </div>
     </>
