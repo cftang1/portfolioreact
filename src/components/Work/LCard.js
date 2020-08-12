@@ -6,7 +6,7 @@ import {
   useFrame,
   useLoader,
 } from "react-three-fiber";
-import { useSpring, a } from "react-spring/three";
+// import { useSpring, a } from "react-spring/three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // import card from '../../content/card2.gltf'
@@ -57,7 +57,6 @@ function Card(props) {
   const primitive = useRef();
 
   const [active, setActive] = useState(false);
-  const [hovered, setHover] = useState(false);
 
   useFrame(
     () => (primitive.current.rotation.x = primitive.current.rotation.y += 0.005)
@@ -85,35 +84,35 @@ function Controls() {
   return <orbitControls args={[camera, gl.domElement]} ref={orbitRef} />;
 }
 
-function Plane() {
-  return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
-      <planeBufferGeometry attach="geometry" args={[100, 100]} />
-      <meshPhysicalMaterial attach="material" color={"white"} />
-    </mesh>
-  );
-}
+// function Plane() {
+//   return (
+//     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
+//       <planeBufferGeometry attach="geometry" args={[100, 100]} />
+//       <meshPhysicalMaterial attach="material" color={"white"} />
+//     </mesh>
+//   );
+// }
 
-function Box() {
-  const [hovered, setHovered] = useState(false);
-  const [active, setActive] = useState(false);
-  const props = useSpring({
-    scale: active ? [1.5, 1.5, 1.5] : [1, 1, 1],
-    color: hovered ? "lightgreen" : "grey",
-  });
+// function Box() {
+//   const [hovered, setHovered] = useState(false);
+//   const [active, setActive] = useState(false);
+//   const props = useSpring({
+//     scale: active ? [1.5, 1.5, 1.5] : [1, 1, 1],
+//     color: hovered ? "lightgreen" : "grey",
+//   });
 
-  return (
-    <a.mesh
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-      onClick={() => setActive(!active)}
-      scale={props.scale}
-    >
-      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
-      <a.meshPhysicalMaterial attach="material" color={props.color} />
-    </a.mesh>
-  );
-}
+//   return (
+//     <a.mesh
+//       onPointerOver={() => setHovered(true)}
+//       onPointerOut={() => setHovered(false)}
+//       onClick={() => setActive(!active)}
+//       scale={props.scale}
+//     >
+//       <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+//       <a.meshPhysicalMaterial attach="material" color={props.color} />
+//     </a.mesh>
+//   );
+// }
 function LCard() {
   return (
     <>
