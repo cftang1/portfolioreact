@@ -10,7 +10,7 @@ function MyWork() {
         <p>Sun Dragon Loyalty Cards</p> */}
         <div className="work-grid">
           <div className="item">
-            <div className="info">Sun Dragon Loyalty Cards</div>
+            {/* <div className="info">Sun Dragon Loyalty Cards</div> */}
 
             <LCard />
           </div>
