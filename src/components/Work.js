@@ -9,12 +9,13 @@ function MyWork() {
         <p>tetris</p>
         <p>Sun Dragon Loyalty Cards</p> */}
         <div className="work-grid">
-          <div>
-            1<br />
+          <div className="item">
+            <div className="info">Sun Dragon Loyalty Cards</div>
+
             <LCard />
           </div>
-          <div>2</div>
-          <div>3</div>
+          <div className="item">2</div>
+          <div className="item">3</div>
         </div>
       </div>
     </>
