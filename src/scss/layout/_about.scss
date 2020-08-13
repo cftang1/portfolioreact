@@ -359,14 +359,51 @@
   );
   h1 {
     font-family: chaney;
+    @include for-phone-only {
+      font-size: 2rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 3.3rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 4rem;
+    }
+    @include for-desktop-up {
+      font-size: 4.5rem;
+    }
+    @include for-big-desktop-up {
+      font-size: 5rem;
+    }
+  }
+  h2 {
+    font-family: chaney;
+
+    @include for-phone-only {
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+    }
+    @include for-desktop-up {
+      font-size: 3rem;
+    }
+    @include for-big-desktop-up {
+      font-size: 3.5rem;
+    }
   }
 }
 .work-grid {
-  display: grid;
+  // display: grid;
   width: 100%;
   .item {
     // border: 1px solid white;
     height: 50vh;
+    &1 {
+      margin-top: 300px;
+    }
   }
   .info {
     position: relative;
@@ -383,5 +420,30 @@
     width: 100%;
     height: 50vh;
     z-index: 2;
+    outline: none;
+  }
+  img {
+    height: 50vh;
+  }
+  p {
+    font-family: bould-thin;
+    font-weight: 600;
+    @include for-phone-only {
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      margin-top: 25px;
+      font-size: 2rem;
+    }
+    @include for-tablet-landscape-up {
+      margin-top: 35px;
+    }
+    @include for-desktop-up {
+      margin-top: 60px;
+    }
+    @include for-big-desktop-up {
+      margin-top: 80px;
+    }
   }
 }
