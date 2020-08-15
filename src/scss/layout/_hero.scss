@@ -1,0 +1,66 @@
+.hero {
+  height: calc(100vh - 45px);
+  // margin-top: 45px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  font-family: argestaheadline-regular;
+  background-color: rgba($color: #c0bfbf, $alpha: 0.1);
+
+  // photography links
+  .ph {
+    color: rgb(104, 174, 231);
+  }
+
+  @include for-phone-only {
+    // padding-top: 200px;
+    .title {
+      font-size: 3rem;
+    }
+    .secondary {
+      font-size: 2rem;
+    }
+  }
+  @include for-phone-only-landscape {
+    .title {
+      font-size: 2.25rem;
+    }
+    .secondary {
+      font-size: 1.8rem;
+    }
+  }
+  @include for-tablet-portrait-up {
+    .title {
+      font-size: 5rem;
+    }
+    .secondary {
+    }
+    font-size: 3rem;
+  }
+  @include for-tablet-landscape-up {
+    .title {
+      font-size: 7rem;
+    }
+    .secondary {
+      font-size: 3rem;
+    }
+  }
+  @include for-desktop-up {
+    // font-size: 3rem;
+    .title {
+      font-size: 8rem;
+    }
+    .secondary {
+      font-size: 3.6rem;
+    }
+  }
+  @include for-big-desktop-up {
+    .title {
+      font-size: 10rem;
+    }
+    .secondary {
+      font-size: 4rem;
+    }
+  }
+}

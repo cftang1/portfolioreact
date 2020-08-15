@@ -5,6 +5,10 @@
     top: 80px;
     right: 12px;
   }
+  @include for-phone-only-landscape {
+    top: 80px;
+    right: 12px;
+  }
   @include for-tablet-portrait-up {
     top: 80px;
     right: 12px;
@@ -46,7 +50,7 @@
 
   // background-color: $primary-color;
   // color: $accent-color;
-  font-family: "bould-thin";
+  font-family: 'bould-thin';
   text-align: center;
   font-size: 1rem;
   @include themed() {
@@ -69,6 +73,7 @@
   h2 {
     writing-mode: vertical-rl;
     padding-right: 9px;
+    font-size: 1.5rem;
   }
 
   // left side
@@ -86,6 +91,8 @@
   // right side
   &.forward {
     right: 0px;
+    padding-top: 0px;
+
     @include themed() {
       border-left: 1px solid rgba(t($text), 0.2);
     }
@@ -131,6 +138,13 @@
       img {
         transform: rotate(180deg);
       }
+    }
+  }
+  @include for-phone-only-landscape {
+    font-size: 0.8rem;
+    h2 {
+      padding-top: 0px;
+      overflow: hidden;
     }
   }
 }

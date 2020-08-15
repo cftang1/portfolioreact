@@ -1,0 +1,122 @@
+.mywork {
+  height: 160vh;
+  padding-top: 150px;
+  // background-color: rgba($color: #747561, $alpha: 0.1);
+  background-image: linear-gradient(
+    rgba(255, 58, 58, 0.9),
+    rgba(255, 243, 77, 0.5)
+  );
+  // border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+
+  // background-color: rgba($color: #c0bfbf, $alpha: 0.2);
+
+  // background-color: rgba($color: #747561, $alpha: 0.1);
+
+  // background-image: linear-gradient(rgba(#c0bfbf, 0.2), rgba(#6b6b6b, 0.3));
+
+  h1 {
+    font-family: chaney;
+    // font-family: bould-thin;
+    font-weight: 200;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
+
+    @include for-phone-only {
+      font-size: 0.875em;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 0.875rem;
+    }
+    @include for-tablet-landscape-up {
+      // font-size: 3rem;
+      font-size: 1rem;
+    }
+    @include for-desktop-up {
+      // font-size: 3rem;
+      font-size: 1rem;
+    }
+    @include for-big-desktop-up {
+      // font-size: 3rem;
+      // font-size: 0.875rem;
+      font-size: 1rem;
+    }
+  }
+  h2 {
+    // font-family: chaney;
+    font-family: argestaheadline-regular;
+
+    @include for-phone-only {
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+    }
+    @include for-desktop-up {
+      font-size: 3rem;
+    }
+    @include for-big-desktop-up {
+      font-size: 3.5rem;
+    }
+  }
+}
+.work-grid {
+  // display: grid;
+  width: 100%;
+  .item {
+    // border: 1px solid white;
+    height: 50vh;
+    &1 {
+      margin-top: 300px;
+    }
+  }
+  .info {
+    position: relative;
+    top: 0;
+    left: 0;
+    // width: 100%;
+    // height: 100%;
+    z-index: 1;
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 2;
+    outline: none;
+  }
+  img {
+    height: 50vh;
+  }
+  p {
+    font-family: argestaheadline-regular;
+    line-height: 1.6;
+    @include for-phone-only {
+      margin-top: 20px;
+      font-size: 0.875rem;
+    }
+    @include for-phone-only-landscape {
+      // row-gap: 20px;
+      margin-top: 30px;
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      margin-top: 25px;
+      font-size: 1rem;
+    }
+    @include for-tablet-landscape-up {
+      margin-top: 35px;
+      font-size: 2rem;
+    }
+    @include for-desktop-up {
+      margin-top: 60px;
+      font-size: 2rem;
+    }
+    @include for-big-desktop-up {
+      margin-top: 80px;
+    }
+  }
+}

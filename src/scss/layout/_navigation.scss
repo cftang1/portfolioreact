@@ -106,15 +106,21 @@ nav {
   .menu-items {
     position: absolute;
     // right: 100px;
-    top: 100px;
     // transform: translate(-50%, -50%);
     // font-size: 5vw;
     font-family: chaney;
     @include for-phone-only {
+      top: 100px;
       font-size: 3rem;
       right: 50px;
     }
+    @include for-phone-only-landscape {
+      top: 50px;
+      font-size: 2.3rem;
+      right: 50px;
+    }
     @include for-tablet-portrait-up {
+      top: 100px;
       font-size: 5rem;
       right: 50px;
     }

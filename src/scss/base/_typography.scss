@@ -1,3 +1,76 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+@include for-phone-only {
+  h5 {
+    font-size: 1rem;
+  }
+}
+@include for-phone-only-landscape {
+  h5 {
+    font-size: 1rem;
+  }
+}
+@include for-tablet-portrait-up {
+  h5 {
+    font-size: 1rem;
+  }
+}
+@include for-tablet-landscape-up {
+  h5 {
+    font-size: 1rem;
+  }
+}
+@include for-desktop-up {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+@include for-big-desktop-up {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+}
+
 //underline
 
 .underline-hover {
@@ -11,7 +84,7 @@
   &::before {
     transition: 350ms;
     height: 4px;
-    content: "";
+    content: '';
     position: absolute;
     // background-color: black;
     @include themed() {
@@ -24,11 +97,6 @@
   &:hover::before {
     width: 100%;
   }
-  // add space after span
-  // &::after {
-  //   content: " ";
-  //   white-space: pre;
-  // }
 }
 
 // text ticker
@@ -118,6 +186,12 @@
     @include for-phone-only {
       font-size: 7.65vw;
     }
+    @include for-phone-only-landscape {
+      font-size: 3.85vw;
+      // &::after {
+      //   content: " peak lockdown hair";
+      // }
+    }
     @include for-tablet-portrait-up {
       font-size: 7.65vw;
     }
@@ -130,7 +204,7 @@
     @include for-big-desktop-up {
       font-size: 3.85vw;
       &::after {
-        content: " peak lockdown hair";
+        content: ' peak lockdown hair';
       }
     }
   }

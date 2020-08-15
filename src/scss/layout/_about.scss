@@ -1,85 +1,4 @@
-.home {
-  // padding-top: 45px;
-  @include themed() {
-    color: t($text);
-    background: t($bg);
-  }
-}
-.container {
-  @include for-phone-only {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  @include for-tablet-portrait-up {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  @include for-tablet-landscape-up {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  @include for-desktop-up {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-  @include for-big-desktop-up {
-    padding-left: 250px;
-    padding-right: 250px;
-  }
-}
-.container2 {
-  @include for-phone-only {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  @include for-tablet-portrait-up {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  @include for-tablet-landscape-up {
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  @include for-desktop-up {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  @include for-big-desktop-up {
-    margin-left: 250px;
-    margin-right: 250px;
-  }
-}
-.about-1 {
-  height: 100vh;
-  // margin-top: 45px;
-  font-family: bould-thin;
-  font-weight: 600;
-  // background-color: rgba($color: #459c98, $alpha: 0.5);
-  background-color: rgba($color: #c0bfbf, $alpha: 0.1);
-
-  .ph {
-    color: rgb(104, 174, 231);
-  }
-
-  @include for-phone-only {
-    // padding-top: 200px;
-    font-size: 2.5rem;
-  }
-  @include for-tablet-portrait-up {
-    font-size: 3.3rem;
-  }
-  @include for-tablet-landscape-up {
-    font-size: 4rem;
-  }
-  @include for-desktop-up {
-    font-size: 4.5rem;
-  }
-  @include for-big-desktop-up {
-    font-size: 5rem;
-  }
-}
-
-.about-2 {
+.about-me {
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -153,6 +72,9 @@
     @include for-phone-only {
       bottom: -5px;
     }
+    @include for-phone-only-landscape {
+      bottom: -60px;
+    }
     @include for-tablet-portrait-up {
       bottom: -15px;
     }
@@ -187,263 +109,128 @@
   h5 {
     font-family: chaney;
     font-weight: 400;
+    opacity: 0.6;
+    z-index: 6;
+    border-bottom: 1px solid white;
+  }
+  p {
+    font-family: argestaheadline-regular;
+    opacity: 0.6;
     z-index: 6;
   }
-
   @include for-phone-only {
     padding-top: 60px;
     h5 {
-      font-size: 2.5rem;
+      font-size: 1rem;
+    }
+    .secondary {
+      font-size: 1.5rem;
+
+      margin-top: 20px;
+    }
+  }
+  @include for-phone-only-landscape {
+    padding-top: 60px;
+    h5 {
+      font-size: 1rem;
+    }
+    .secondary {
+      margin-top: 20px;
+
+      font-size: 1rem;
     }
   }
   @include for-tablet-portrait-up {
     padding-top: 70px;
     h5 {
-      font-size: 3rem;
+      font-size: 1rem;
+    }
+    .secondary {
+      font-size: 2rem;
     }
   }
   @include for-tablet-landscape-up {
-    padding-top: 100px;
+    padding-top: 150px;
     h5 {
-      font-size: 3rem;
+      font-size: 1rem;
     }
   }
   @include for-desktop-up {
-    padding-top: 120px;
+    padding-top: 150px;
     h5 {
-      font-size: 4rem;
+      font-size: 1rem;
     }
-  }
-  @include for-big-desktop-up {
-    padding-top: 100px;
-    h5 {
-      font-size: 4.5rem;
-    }
-  }
-}
-.grid {
-  position: absolute;
-  display: grid;
-  width: 100%;
-
-  // column-gap: 100%;
-  // margin-right: 100px;
-  // width: 90vw;
-
-  p {
-    font-family: bould-thin;
-    // font-weight: 200;
-    opacity: 0.6;
-    z-index: 6;
-    font-weight: 600;
-  }
-  img {
-    opacity: 0.7;
-    position: relative;
-    // max-height: 50%;
-
-    width: auto;
-    height: auto;
-    @include themed() {
-      border: 1px solid t($text);
-    }
-  }
-  @include for-phone-only {
-    row-gap: 20px;
-    grid-template-columns: 100%;
-
-    p {
-      font-size: 1.5rem;
-
-      margin-top: 20px;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  @include for-tablet-portrait-up {
-    grid-template-columns: 100%;
-    row-gap: 30px;
-    margin-top: 30px;
-    p {
-      font-size: 2.3rem;
-    }
-    img {
-      width: 100%;
-    }
-  }
-  @include for-tablet-landscape-up {
-    grid-template-columns: 40% auto 40%;
-    padding-top: 40px;
-  }
-  @include for-desktop-up {
-    p {
+    .secondary {
       margin-top: 0px;
 
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
   @include for-big-desktop-up {
-    p {
-      font-size: 3rem;
-    }
-  }
-}
-
-.contact {
-  // padding-top: 50px;
-  height: 100vh;
-  position: relative;
-
-  color: white;
-  background: rgba($color: #2b41a3, $alpha: 0.8);
-  h1 {
-    padding-top: 50px;
-
-    font-family: chaney;
-    @include for-phone-only {
-      font-size: 2rem;
-    }
-    @include for-tablet-portrait-up {
-      font-size: 3.3rem;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 4rem;
-    }
-    @include for-desktop-up {
-      font-size: 4.5rem;
-    }
-    @include for-big-desktop-up {
-      font-size: 5rem;
-    }
-  }
-  p {
-    // font-family: Arial, Helvetica, sans-serif;
-    font-family: bould-thin;
-    font-weight: 600;
-    @include for-phone-only {
+    padding-top: 150px;
+    h5 {
       font-size: 1rem;
     }
-    @include for-tablet-portrait-up {
+    .secondary {
       font-size: 2rem;
     }
-    // @include for-tablet-landscape-up {
-    //   font-size: 4rem;
-    // }
-    // @include for-desktop-up {
-    //   font-size: 4.5rem;
-    // }
-    // @include for-big-desktop-up {
-    //   font-size: 3rem;
-    // }
   }
-  .details {
+  .grid {
     position: absolute;
-    bottom: 30px;
-    @include for-phone-only {
-      // padding-top: 70vh;
-    }
-    @include for-tablet-portrait-up {
-      // padding-top: 50vh;
-    }
-  }
-}
-
-//work
-.mywork {
-  height: 160vh;
-  // background-color: rgba($color: #747561, $alpha: 0.1);
-  background-image: linear-gradient(
-    rgba(255, 58, 58, 0.9),
-    rgba(255, 243, 77, 0.5)
-  );
-  h1 {
-    font-family: chaney;
-    @include for-phone-only {
-      font-size: 2rem;
-    }
-    @include for-tablet-portrait-up {
-      font-size: 3.3rem;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 4rem;
-    }
-    @include for-desktop-up {
-      font-size: 4.5rem;
-    }
-    @include for-big-desktop-up {
-      font-size: 5rem;
-    }
-  }
-  h2 {
-    font-family: chaney;
-
-    @include for-phone-only {
-      font-size: 1rem;
-    }
-    @include for-tablet-portrait-up {
-      font-size: 1.5rem;
-    }
-    @include for-tablet-landscape-up {
-      font-size: 2rem;
-    }
-    @include for-desktop-up {
-      font-size: 3rem;
-    }
-    @include for-big-desktop-up {
-      font-size: 3.5rem;
-    }
-  }
-}
-.work-grid {
-  // display: grid;
-  width: 100%;
-  .item {
-    // border: 1px solid white;
-    height: 50vh;
-    &1 {
-      margin-top: 300px;
-    }
-  }
-  .info {
-    position: relative;
-    top: 0;
-    left: 0;
-    // width: 100%;
-    // height: 100%;
-    z-index: 1;
-  }
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: grid;
     width: 100%;
-    height: 50vh;
-    z-index: 2;
-    outline: none;
-  }
-  img {
-    height: 50vh;
-  }
-  p {
-    font-family: bould-thin;
-    font-weight: 600;
-    @include for-phone-only {
-      margin-top: 20px;
-      font-size: 1rem;
+
+    img {
+      opacity: 0.7;
+      position: relative;
+      // max-height: 50%;
+
+      width: auto;
+      height: auto;
+      @include themed() {
+        border: 1px solid t($text);
+      }
     }
+    @include for-phone-only {
+      row-gap: 20px;
+      grid-template-columns: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+    @include for-phone-only-landscape {
+      // row-gap: 20px;
+      grid-template-columns: 40% auto 40%;
+      img {
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+
     @include for-tablet-portrait-up {
-      margin-top: 25px;
-      font-size: 2rem;
+      grid-template-columns: 100%;
+      row-gap: 30px;
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+      }
     }
     @include for-tablet-landscape-up {
-      margin-top: 35px;
+      grid-template-columns: 40% auto 40%;
+      padding-top: 40px;
     }
     @include for-desktop-up {
-      margin-top: 60px;
+      img {
+        width: 100%;
+      }
     }
     @include for-big-desktop-up {
-      margin-top: 80px;
+      grid-template-columns: 25% auto 40%;
+      img {
+        width: 100%;
+      }
     }
   }
 }

@@ -17,9 +17,11 @@ function DarkToggle() {
 
   return (
     <>
-      <button className="addDarkMode" type="button" onClick={handleDarkMode}>
-        {/* Switch to {clicked.status ? "Light mode" : "Dark mode"} */}
-      </button>
+      <button
+        className="addDarkMode"
+        type="button"
+        onClick={handleDarkMode}
+      ></button>
     </>
   );
 }

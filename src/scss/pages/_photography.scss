@@ -70,6 +70,9 @@
   @include for-phone-only {
     min-width: calc(599px - 80px);
   }
+  @include for-phone-only-landscape {
+    min-width: calc(900px - 80px);
+  }
   @include for-tablet-portrait-up {
     min-width: calc(600px - 80px);
     h1 {
@@ -136,11 +139,15 @@
 .album-container {
   padding-top: 5px;
   // padding-bottom: 50px; // check
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
   @include for-phone-only {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 56px;
+    margin-right: 56px;
+  }
+  @include for-phone-only-landscape {
+    margin-left: 56px;
+    margin-right: 56px;
   }
 }
 .album-grid {
@@ -152,6 +159,9 @@
   // grid-row-gap: 240px;
   @include for-phone-only {
     grid-template-columns: 1fr;
+  }
+  @include for-phone-only-landscape {
+    grid-template-columns: 1fr 1fr 1fr;
   }
   @include for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr;

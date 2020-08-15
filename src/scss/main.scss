@@ -1,29 +1,23 @@
-// main should only include imports
-
-@charset "UTF-8";
+@charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+@import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
 
 // 2. Vendors
 // @import "vendors/normalize";
 
 // 3. Base stuff
-@import "base/base", "base/fonts", "base/typography", "base/helpers";
+@import 'base/base', 'base/fonts', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import "layout/header", "layout/home", "layout/about", "layout/footer",
-  "layout/navigation";
+@import 'layout/header', 'layout/hero', 'layout/work', 'layout/about',
+  'layout/contact', 'layout/footer', 'layout/navigation';
 
 // 5. Components
-@import "components/button";
+@import 'components/button';
 
 // 6. Page-specific styles
-@import "pages/home", "pages/photography", "pages/notfound";
+@import 'pages/home', 'pages/photography', 'pages/notfound';
 
 // 7. Themes
-@import "themes/default", "themes/dark";
-
-// body {
-//   background-color: red;
-// }
+@import 'themes/default', 'themes/dark';

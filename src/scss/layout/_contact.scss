@@ -1,0 +1,66 @@
+.contact {
+  // padding-top: 100px;
+  height: 100vh;
+  position: relative;
+
+  color: white;
+  background: rgba($color: #2b41a3, $alpha: 0.8);
+  h1 {
+    padding-top: 150px;
+    border-bottom: 1px solid white;
+    font-family: chaney;
+    // font-family: bould-thin;
+
+    @include for-phone-only {
+      // font-size: 2rem;
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      // font-size: 3.3rem;
+      font-size: 1rem;
+    }
+    @include for-tablet-landscape-up {
+      // font-size: 4rem;
+      font-size: 1rem;
+    }
+    @include for-desktop-up {
+      // font-size: 4.5rem;
+      font-size: 1rem;
+    }
+    @include for-big-desktop-up {
+      // font-size: 5rem;
+      font-size: 1rem;
+    }
+  }
+  p {
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: argestaheadline-regular;
+    @include for-phone-only {
+      font-size: 1rem;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 2rem;
+    }
+    @include for-tablet-landscape-up {
+      font-size: 2rem;
+    }
+    @include for-desktop-up {
+      font-size: 2rem;
+    }
+    @include for-big-desktop-up {
+      font-size: 2rem;
+    }
+  }
+  .details {
+    font-family: argestaheadline-regular;
+
+    position: absolute;
+    bottom: 30px;
+    @include for-phone-only {
+      // padding-top: 70vh;
+    }
+    @include for-tablet-portrait-up {
+      // padding-top: 50vh;
+    }
+  }
+}

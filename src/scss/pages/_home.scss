@@ -1,0 +1,12 @@
+.fonttest {
+  font-family: chaney;
+  font-size: 10vw;
+}
+
+.home {
+  // padding-top: 45px;
+  @include themed() {
+    color: t($text);
+    background: t($bg);
+  }
+}

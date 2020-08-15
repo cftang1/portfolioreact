@@ -1,5 +1,5 @@
 import React from "react";
-import LCard from "./Work/LCard";
+import LCard from "./LCard";
 function MyWork() {
   return (
     <>
