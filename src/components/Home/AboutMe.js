@@ -59,8 +59,9 @@ function AboutMe() {
             <ViewportText delay={750}>
               <p className='secondary'>
                 Throughout lockdown I have been working at ASDA, fulfilling
-                online orders as a picker until I find my dream job in Web
-                Development.
+                online orders as a picker. On my days off, I have also been
+                learning React, making this portfolio to showcase my creative
+                talents and coding skills.
               </p>
             </ViewportText>
             <div></div>
