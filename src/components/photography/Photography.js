@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import PhotoAlbums from "./PhotoAlbums";
+import PhotoAlbums from './PhotoAlbums';
 
 function Photography() {
   return (
     <>
-      <div className="photography-page">
-        <h1>photography</h1>
+      <div className='photography-page'>
+        <h1 className='ptitle'>Photography</h1>
         <PhotoAlbums />
       </div>
     </>
