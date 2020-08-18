@@ -25,7 +25,7 @@ function MyWork() {
           </div>
         </div>
         <div className='work-container-alt'>
-          <WorkToggle name={'DDouble E Interactive Drawing'}>
+          <WorkToggle name={'DDoubleE Drawing'}>
             <div className='work-grid'>
               <div className='text-area'>
                 <p className='text'>

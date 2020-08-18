@@ -71,7 +71,7 @@
     font-family: argestaheadline-regular;
 
     @include for-phone-only {
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
     @include for-tablet-portrait-up {
       font-size: 1.5rem;
@@ -91,7 +91,7 @@
   // display: grid;
   width: 100%;
   margin-top: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 10vh;
   .item {
     // border: 1px solid white;
     height: 50vh;
@@ -125,7 +125,7 @@
     // font-family: argestaheadline-regular;
     line-height: 1.6;
     @include for-phone-only {
-      margin-top: 20px;
+      margin-top: 60px;
     }
     @include for-phone-only-landscape {
       // row-gap: 20px;
