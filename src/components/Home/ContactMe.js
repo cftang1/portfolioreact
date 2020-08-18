@@ -12,10 +12,10 @@ function ContactMe() {
     <>
       <div className='contact container' id='contact'>
         <div>
-          <ViewportBlock delay={550}>
-            <h1>Contact </h1>
-          </ViewportBlock>
           <div className='details-flex'>
+            <ViewportBlock delay={550}>
+              <h1>Contact </h1>
+            </ViewportBlock>
             <ViewportBlock delay={800}>
               <p>Email: chifungtang8@gmail.com</p>
             </ViewportBlock>

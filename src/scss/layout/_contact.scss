@@ -1,5 +1,4 @@
 .contact {
-  // padding-top: 100px;
   height: 100vh;
   position: relative;
 
@@ -11,7 +10,7 @@
   background-color: rgba($color: #747561, $alpha: 0.1);
 
   h1 {
-    padding-top: 150px;
+    padding-top: 8vh;
     // border-bottom: 1px solid white;
     @include themed() {
       border-bottom: 1px solid t($secondary);
@@ -68,8 +67,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 55vh;
-    padding-top: 50px;
+    height: 90vh;
+    // margin-top: 50px;
+    // margin-bottom: 50px;
   }
   .details {
     @include themed() {
