@@ -29,7 +29,6 @@ function ContactMe() {
               {/* </ViewportBlock> */}
             </div>
           </div>
-          {/* https://www.instagram.com/p/B81aGxZBRnW/?utm_source=ig_web_copy_link */}
         </div>
       </div>
     </>

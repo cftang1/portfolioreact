@@ -32,7 +32,7 @@ function MyWork() {
                   An interactive p5js sketch of a drawing I drew.
                 </p>
                 <div className='buttons'>
-                  <a href='https://keen-bhaskara-31058f.netlify.app/'>
+                  <a href='https://www.instagram.com/p/B81aGxZBRnW/?utm_source=ig_web_copy_link'>
                     <p>Instagram Post</p>
                   </a>
                 </div>
