@@ -39,32 +39,33 @@
     }
   }
   h1 {
-    font-family: chaney;
+    font-family: argestaheadline-regular;
+
     // font-family: bould-thin;
     font-weight: 200;
     @include themed() {
       border-bottom: 1px solid t($text);
     }
 
-    @include for-phone-only {
-      font-size: 0.875em;
-    }
-    @include for-tablet-portrait-up {
-      font-size: 0.875rem;
-    }
-    @include for-tablet-landscape-up {
-      // font-size: 3rem;
-      font-size: 1rem;
-    }
-    @include for-desktop-up {
-      // font-size: 3rem;
-      font-size: 1rem;
-    }
-    @include for-big-desktop-up {
-      // font-size: 3rem;
-      // font-size: 0.875rem;
-      font-size: 1rem;
-    }
+    // @include for-phone-only {
+    //   font-size: 0.875em;
+    // }
+    // @include for-tablet-portrait-up {
+    //   font-size: 0.875rem;
+    // }
+    // @include for-tablet-landscape-up {
+    //   // font-size: 3rem;
+    //   font-size: 1rem;
+    // }
+    // @include for-desktop-up {
+    //   // font-size: 3rem;
+    //   font-size: 1rem;
+    // }
+    // @include for-big-desktop-up {
+    //   // font-size: 3rem;
+    //   // font-size: 0.875rem;
+    //   font-size: 1rem;
+    // }
   }
   h2 {
     // font-family: chaney;

@@ -106,10 +106,9 @@
   @include themed() {
     color: t($text);
   }
-  h5 {
-    font-family: chaney;
-    font-weight: 400;
-    opacity: 0.6;
+  h1 {
+    // font-family: chaney;
+    font-family: argestaheadline-regular;
     z-index: 6;
 
     @include themed() {
@@ -118,14 +117,10 @@
   }
   p {
     font-family: argestaheadline-regular;
-    opacity: 0.6;
     z-index: 6;
   }
   @include for-phone-only {
     padding-top: 60px;
-    h5 {
-      font-size: 1rem;
-    }
     .secondary {
       font-size: 1.5rem;
 
@@ -134,9 +129,6 @@
   }
   @include for-phone-only-landscape {
     padding-top: 60px;
-    h5 {
-      font-size: 1rem;
-    }
     .secondary {
       margin-top: 20px;
 
@@ -145,24 +137,15 @@
   }
   @include for-tablet-portrait-up {
     padding-top: 70px;
-    h5 {
-      font-size: 1rem;
-    }
     .secondary {
       font-size: 2rem;
     }
   }
   @include for-tablet-landscape-up {
     padding-top: 150px;
-    h5 {
-      font-size: 1rem;
-    }
   }
   @include for-desktop-up {
     padding-top: 150px;
-    h5 {
-      font-size: 1rem;
-    }
     .secondary {
       margin-top: 0px;
 
@@ -171,9 +154,6 @@
   }
   @include for-big-desktop-up {
     padding-top: 150px;
-    h5 {
-      font-size: 1rem;
-    }
     .secondary {
       font-size: 2rem;
     }

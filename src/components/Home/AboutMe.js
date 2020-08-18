@@ -53,7 +53,7 @@ function AboutMe() {
         </div>
         <div className='container2 about-content'>
           <ViewportImage delay={250}>
-            <h5>So what have I been up to recently?</h5>
+            <h1>So what have I been up to recently?</h1>
           </ViewportImage>
           <div className='grid'>
             <ViewportText delay={750}>
