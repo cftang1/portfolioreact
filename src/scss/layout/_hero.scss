@@ -4,13 +4,19 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
-
+  @include themed() {
+    color: t($text);
+  }
   font-family: argestaheadline-regular;
   // background-color: rgba($color: #c0bfbf, $alpha: 0.1);
 
   // photography links
   .ph {
-    color: rgb(104, 174, 231);
+    // color: rgb(104, 174, 231);
+    @include themed() {
+      color: t($secondary);
+    }
+    // font-weight: bold;
   }
 
   @include for-phone-only {
