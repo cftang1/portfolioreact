@@ -111,7 +111,10 @@
     font-weight: 400;
     opacity: 0.6;
     z-index: 6;
-    border-bottom: 1px solid white;
+
+    @include themed() {
+      border-bottom: 1px solid t($text);
+    }
   }
   p {
     font-family: argestaheadline-regular;

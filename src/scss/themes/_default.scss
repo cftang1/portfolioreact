@@ -1,4 +1,6 @@
 body {
-  background-color: $primary-color;
-  color: $accent-color;
+  @include themed() {
+    color: t($text);
+    background-color: t($bg);
+  }
 }

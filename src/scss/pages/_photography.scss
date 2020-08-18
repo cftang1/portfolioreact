@@ -6,6 +6,11 @@
     color: t($text);
     background: t($bg);
   }
+  font-family: argestaheadline-regular;
+  .ptitle {
+    padding-left: 50px;
+    font-size: 2.5rem;
+  }
 }
 .photo-container {
   position: fixed;
@@ -46,14 +51,21 @@
   h1 {
     z-index: -1;
     line-height: 2vh;
-    color: rgba(0, 195, 255, 0.171);
+    // color: rgba(0, 195, 255, 0.171);
+    @include themed() {
+      color: t($secondary);
+    }
+
     font-family: chaney;
     text-decoration: underline;
 
     font-size: 20vh;
   }
   h2 {
-    color: rgb(0, 70, 92);
+    @include themed() {
+      color: t($secondary);
+    }
+
     text-align: left;
 
     line-height: 1;
@@ -206,8 +218,8 @@
       padding-right: 5px;
       &:hover {
         @include themed() {
-          color: t($text-hover);
-          background: t($hover);
+          color: t($bg);
+          background: t($text);
         }
       }
       .album-card-date {

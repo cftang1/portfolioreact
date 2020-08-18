@@ -1,44 +1,25 @@
-$primary-color: #fff;
-$accent-color: #000;
-
-$primary-color-dark: #000;
-$accent-color-dark: #fff;
-
-//////////////////////
 $bg--light: #fff;
-$bg--card--light: #fff;
 $text--light: #000;
-$text--2--light: #000;
-$hover--light: #000;
-$hover--text--light: #fff;
+$secondary--light: rgb(0, 0, 255);
 
 $bg--dark: #000;
-$bg--card--dark: #000;
 $text--dark: #fff;
-$text--2--dark: #fff;
-$hover--dark: #fff;
-$hover--text--dark: #000;
+$secondary--dark: rgb(255, 255, 0);
 
-$bg: "bg";
-$text: "text";
-$text-hover: "text-hover";
-$text-secondary: "text-secondary";
-$hover: "hover";
+$bg: 'bg';
+$text: 'text';
+$secondary: 'secondary';
 
 $themes: (
   default: (
     bg: $bg--light,
     text: $text--light,
-    text-secondary: $text--2--light,
-    hover: $hover--light,
-    text-hover: $hover--text--light,
+    secondary: $secondary--light,
   ),
   dark: (
     bg: $bg--dark,
     text: $text--dark,
-    text-secondary: $text--2--dark,
-    hover: $hover--dark,
-    text-hover: $hover--text--dark,
+    secondary: $secondary--dark,
   ),
 );
 $squareSize: calc((100vh - 60px) / 20);

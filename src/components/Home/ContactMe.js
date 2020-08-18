@@ -15,15 +15,21 @@ function ContactMe() {
           <ViewportBlock delay={550}>
             <h1>Contact </h1>
           </ViewportBlock>
-          <ViewportBlock delay={800}>
-            <p>chifungtang8@gmail.com</p>
-          </ViewportBlock>
-        </div>
-        <div className='details'>
-          <ViewportBlock delay={1000}>
-            <p>Resume on request</p>
-            <p>Phone number on request</p>
-          </ViewportBlock>
+          <div className='details-flex'>
+            <ViewportBlock delay={800}>
+              <p>Email: chifungtang8@gmail.com</p>
+            </ViewportBlock>
+            <div className='details'>
+              {/* <ViewportBlock delay={1000}> */}
+              <p>Resume {'&'} Phone on request</p>
+              <a href='https://www.instagram.com/chisuschrist/'>
+                <p>Instagram</p>
+              </a>
+
+              {/* </ViewportBlock> */}
+            </div>
+          </div>
+          {/* https://www.instagram.com/p/B81aGxZBRnW/?utm_source=ig_web_copy_link */}
         </div>
       </div>
     </>

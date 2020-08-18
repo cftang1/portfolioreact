@@ -53,6 +53,7 @@
   font-family: 'bould-thin';
   text-align: center;
   font-size: 1rem;
+  // font-weight: 600;
   @include themed() {
     color: t($text);
     background-color: t($bg);
@@ -63,8 +64,11 @@
   }
 
   &:hover {
-    background-color: grey;
-    color: $primary-color;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    @include themed() {
+      color: t($text);
+      background-color: t($bg);
+    }
     img {
       filter: invert(1);
     }
@@ -74,6 +78,7 @@
     writing-mode: vertical-rl;
     padding-right: 9px;
     font-size: 1.5rem;
+    font-weight: bold;
   }
 
   // left side
